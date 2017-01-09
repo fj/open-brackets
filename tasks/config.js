@@ -33,6 +33,11 @@ var self = module.exports = {
     output: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'public'),
     tasks: () => self.composePath('tasks'),
     siteRoot: () => self.composePath(self.sharedConfiguration.siteRootDirectoryName),
+    siteContentPaths: () => {
+      return self.sharedConfiguration.siteContentDirectories.map((e, i, a) => {
+        return self.canonicalPath(self.sharedPaths.siteRoot(), e, '**', '*');
+      });
+    },
 
     assetRoot: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'assets'),
     themeAssetRoot: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'themes', self.sharedConfiguration.themeName, 'assets'),
@@ -40,10 +45,19 @@ var self = module.exports = {
       self.sharedPaths.assetRoot(),
       self.sharedPaths.themeAssetRoot()
     ],
-    siteContentPaths: () => {
-      return self.sharedConfiguration.siteContentDirectories.map((e, i, a) => {
-        return self.canonicalPath(self.sharedPaths.siteRoot(), e, '**', '*');
-      });
+    // Cartesian product of asset roots and asset directories.
+    siteAssetPaths: () => {
+      var flatMap = function(xs, f) {
+        return xs.map(f).reduce((e, rest) => e.concat(rest), []);
+      };
+
+      var roots = self.sharedPaths.siteAssetRoots();
+      var mapPrefixesAndAssetDirectoriesToPaths =
+        root => self.sharedConfiguration.siteAssetDirectories.map(
+          assetDirectory => self.canonicalPath(root, assetDirectory, '**', '*')
+        );
+
+      return flatMap(roots, mapPrefixesAndAssetDirectoriesToPaths);
     },
   }
 };
