@@ -1,0 +1,9 @@
+{{ define "content" }}
+  <p>Welcome to the index page.</p>
+  <p>Here are the posts:</p>
+  <ul>
+    {{ range .Data.Pages }}
+      <li>-- {{ .Title }} || {{ .Date.Format "2006-01-02 15:04" }} || {{ .Permalink }}</li>
+    {{ end }}
+  </ul>
+{{ end }}
