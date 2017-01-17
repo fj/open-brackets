@@ -12,10 +12,10 @@
     <div class="measure--lg">
       <img src="https://s3.amazonaws.com/assets.jxf.me/images/jf.jpeg" alt="picture of John Feminella" class="hero-image">
       <h1 class="hero-title">
-        {{ .Site.Title }}
+        {{ i18n "site.owner.name" }}
       </h1>
       <p class="hero-description caps">
-        {% include description.content %}
+        {{ i18n "site.owner.description" }}
       </p>
       <!-- [TODO]: social links -->
       <nav class="social">

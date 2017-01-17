@@ -1,4 +1,7 @@
 baseurl: http://jxf.me
-languageCode: en-us
 title: jxf
 metaDataFormat: yaml
+
+# Default locale is en-US.
+# Casing is nonstandard; Hugo wants locales like `en-us`, but  i18n file names like `en-US`.
+defaultContentLanguage: "en-us"
