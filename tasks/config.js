@@ -17,7 +17,7 @@ var self = module.exports = {
   sharedConfiguration: {
     siteRootDirectoryName: 'blog',
     themeName: 'jxf-theme',
-    assetManifestName: 'rev.manifest.json',
+    assetManifestName: 'rev-manifest.json',
     siteAssetDirectorySuffixMappings: [  // [DEBUG] use ES6 Map like this: [['styles', ['**', '/*.scss']], [..., [...]], ...]
       {
         assetName: 'styles',
@@ -52,7 +52,8 @@ var self = module.exports = {
   sharedPaths: {
     configFile: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'config.yml'),
     outputSite: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'public'),
-    outputAssets: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'static'),
+    outputPublicAssets: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'public', 'assets'),
+    outputIntermediateAssets: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'static', 'assets'),
     tasks: () => self.composePath('tasks'),
     siteRoot: () => self.composePath(self.sharedConfiguration.siteRootDirectoryName),
     siteContentPaths: () => {

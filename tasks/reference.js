@@ -4,7 +4,7 @@ var size = require('gulp-size');
 var gdebug = require('gulp-debug');
 
 gulp.task('reference:all', ['hugo:all'], function() {
-    var manifest = gulp.src('blog/public/rev-manifest.json');
+    var manifest = gulp.src('blog/public/assets/rev-manifest.json');
 
     return gulp.src(['blog/public/**/*.html', 'blog/public/**/*.xml', 'blog/public/**/*.css'])
         .pipe(gdebug({title: 'reference[in]:'}))

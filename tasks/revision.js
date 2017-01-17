@@ -12,7 +12,7 @@ gulp.task('revision', ['styles' /* [DEBUG] , 'scripts', 'images', 'svg'*/], func
     assetPropertySource: 'outputs'
   });
 
-  var outputAssetRoot = cfg.sharedPaths.outputAssets();
+  var outputAssetRoot = cfg.sharedPaths.outputPublicAssets();
   var temporaryAssetRoot = cfg.sharedPaths.temporaryAssetRoot();
 
   return gulp.src(temporaryAssetDirectories, {base: temporaryAssetRoot})

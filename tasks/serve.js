@@ -1,14 +1,15 @@
 var g = require("gulp");
+var rs = require("run-sequence").use(g);
 var browserSync = require("browser-sync");
 
 var cfg = require('./config');
 var gutil = require('gulp-util');
 
-g.task('serve', ['build:all'], function() {
-  // Serve files from the root of this project
+g.task('serve:all', () => {
+  // Serve files from the root of this project.
   browserSync({
     server: {
-      baseDir: cfg.sharedPaths.output(),
+      baseDir: cfg.sharedPaths.outputSite(),
     },
     open: false
   });
@@ -32,4 +33,8 @@ g.task('serve', ['build:all'], function() {
       'build:all'
     ]
   );
+});
+
+g.task('serve', function(callback) {
+  rs('clean:all', 'build:all', 'serve:all', callback);
 });
