@@ -1,0 +1,28 @@
+<li class="list-item list-item--compact">
+  <a href="{{ .item.Permalink }}" title="{{ .item.Title }}">
+    <div class="media-object list-item-title--compact">
+      <div class="media-object-figure">
+        <h4 class="m0">
+          <small>
+            <span class="muted">
+
+              <!-- [TODO] Icon partial goes here. -->
+              <!-- {% include icon.html post_or_event=include.list_item %} --> &nbsp;
+
+              <!-- [TODO] Date partial goes here. -->
+              <time datetime="{{ .item.Date.Format "2006-01-02" }}" title="{{ .item.Date.Format "2006-01-02 15:04" }}">
+                {{ .item.Date.Format "2006-01-02" }}
+              </time>
+
+            </span>
+          </small>
+        </h4>
+      </div>
+      <div class="media-object-body">
+        <h4 class="m0">
+          {{ .item.Title }}
+        </h4>
+      </div>
+    </div>
+  </a>
+</li>

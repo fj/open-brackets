@@ -1,0 +1,12 @@
+<div class="block">
+  <div class="list-meta-title">
+    recent {{ .resourceType }}
+    <a href="/blog" class="list-meta-all" title="see all {{ .resourceType }}">see all</a>
+  </div>
+
+  <ul class="list">
+    {{ range where .content.Site.Pages "Section" .resourceType }}
+      {{ partial "summary-content-list-item.html" (dict "item" . )}}
+    {{ end }}
+  </ul>
+</div>
