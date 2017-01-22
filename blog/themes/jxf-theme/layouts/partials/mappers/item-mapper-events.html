@@ -1,0 +1,1 @@
+{{ partial "summary-content-list-item.html" (dict "item" . "date" (index (split .Params.event.date_range "⋯") 0) "title" .Params.name) }}

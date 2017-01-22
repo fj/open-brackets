@@ -1,5 +1,5 @@
 <li class="list-item list-item--compact">
-  <a href="{{ .item.Permalink }}" title="{{ .item.Title }}">
+  <a href="{{ .item.Permalink }}" title="{{ .title }}">
     <div class="media-object list-item-title--compact">
       <div class="media-object-figure">
         <h4 class="m0">
@@ -10,8 +10,8 @@
               <!-- {% include icon.html post_or_event=include.list_item %} --> &nbsp;
 
               <!-- [TODO] Date partial goes here. -->
-              <time datetime="{{ .item.Date.Format "2006-01-02" }}" title="{{ .item.Date.Format "2006-01-02 15:04" }}">
-                {{ .item.Date.Format "2006-01-02" }}
+              <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02 15:04" .date }}">
+                {{ dateFormat "2006-01-02" .date }}
               </time>
 
             </span>
@@ -20,7 +20,7 @@
       </div>
       <div class="media-object-body">
         <h4 class="m0">
-          {{ .item.Title }}
+          {{ .title }}
         </h4>
       </div>
     </div>

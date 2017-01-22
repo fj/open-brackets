@@ -5,8 +5,9 @@
   </div>
 
   <ul class="list">
+    {{ $partialName := delimit (slice "mappers/item-mapper-" .resourceType ".html") "" }}
     {{ range where .content.Site.Pages "Section" .resourceType }}
-      {{ partial "summary-content-list-item.html" (dict "item" . )}}
+      {{ partial ($partialName | string) . }}
     {{ end }}
   </ul>
 </div>
