@@ -1,0 +1,13 @@
+.media-object {
+  display: flex;
+  align-items: flex-start;
+}
+
+.media-object-figure {
+  margin-right: 1em;
+  flex: 1.25 0 0;
+}
+
+.media-object-body {
+  flex: 4 0 0;
+}

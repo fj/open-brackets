@@ -1,0 +1,44 @@
+.g-item-row {
+  border: 0;
+  border-top: thin solid $off-white-dark;
+}
+
+.g-item-row:first-child {
+  border: 0;
+}
+
+.g-item-row:last-child {
+  border-bottom: 0;
+}
+
+.g-item-object {
+  padding: $padding*2;
+}
+
+.g-item-object:first-child {
+}
+
+.g-item-title {
+  @extend .h4;
+
+  padding-top: 0;
+  margin-top: .75rem;
+}
+
+.g-item-subtitle {
+  @extend .h5;
+
+  font-family: $sans-font-family;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: .75rem;
+}
+
+.g-item-description {
+  @extend .small;
+
+  padding-top: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}
