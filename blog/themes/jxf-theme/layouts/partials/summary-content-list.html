@@ -1,12 +1,13 @@
 <div class="block">
   <div class="list-meta-title">
     recent {{ .resourceType }}
-    <a href="/blog" class="list-meta-all" title="see all {{ .resourceType }}">see all</a>
+    <a href="{{ (.content.Site.GetPage "section" .resourceType).Permalink }}" class="list-meta-all" title="see all {{ .resourceType }}">see all</a>
   </div>
 
   <ul class="list">
     {{ $partialName := delimit (slice "mappers/item-mapper-" .resourceType ".html") "" }}
-    {{ range where .content.Site.Pages "Section" .resourceType }}
+
+    {{ range where (.content.Site.RegularPages.ByParam .sortKey).Reverse "Section" .resourceType }}
       {{ partial ($partialName | string) . }}
     {{ end }}
   </ul>

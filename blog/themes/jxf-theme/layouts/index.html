@@ -42,10 +42,10 @@
     <div class="g">
       <div class="g-r">
         <section class="g-r-c-6-12 p1 mx1 home-list">
-          {{ partial "summary-content-list.html" (dict "resourceType" "entries" "content" .) }}
+          {{ partial "summary-content-list.html" (dict "resourceType" "entries" "sortKey" "date" "content" .) }}
         </section>
         <section class="g-r-c-6-12 p1 mx1 home-list">
-          {{ partial "summary-content-list.html" (dict "resourceType" "events" "content" .) }}
+          {{ partial "summary-content-list.html" (dict "resourceType" "events" "sortKey" "event.date_range" "content" .) }}
         </section>
       </div>
     </div>
