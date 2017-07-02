@@ -56,6 +56,7 @@ var self = module.exports = {
     outputIntermediateAssets: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'static', 'assets'),
     tasks: () => self.composePath('tasks'),
     siteRoot: () => self.composePath(self.sharedConfiguration.siteRootDirectoryName),
+    // Map each siteContentDirectory `d` to '`d`/**/*'.
     siteContentPaths: () => {
       return self.sharedConfiguration.siteContentDirectories.map((e, i, a) => {
         return self.canonicalPath(self.sharedPaths.siteRoot(), e, '**', '*');
@@ -66,6 +67,7 @@ var self = module.exports = {
     temporaryAssetRoot: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'tmp'),
     themeRoot: () => self.canonicalPath(self.sharedPaths.siteRoot(), 'themes', self.sharedConfiguration.themeName),
     themeAssetRoot: () => self.canonicalPath(self.sharedPaths.themeRoot(), 'assets'),
+    // Use both our local styles and the theme's styles.
     siteAssetRoots: () => [
       self.sharedPaths.assetRoot(),
       self.sharedPaths.themeAssetRoot()
@@ -93,6 +95,8 @@ var self = module.exports = {
     },
     siteAssetPathPrefixes: () => self.sharedPaths.siteAssetPathGenerator({shouldAddSuffixes: false}),
     siteAssetPaths: () => self.sharedPaths.siteAssetPathGenerator({shouldAddSuffixes: true}),
+
+    // Get the asset path for the `assetType` specified.
     siteAssetPathsForAsset:
       ({assetType = 'styles'} = {}) => self.sharedPaths.siteAssetPaths().filter(
         (e) => e.split(path.sep).some((segment) => segment === assetType)
