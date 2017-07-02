@@ -36,5 +36,5 @@ g.task('serve:all', () => {
 });
 
 g.task('serve', function(callback) {
-  rs('clean:all', 'build:all', 'serve:all', callback);
+  rs('clean:all', 'build:all', 'clean:post', 'serve:all', callback);
 });
