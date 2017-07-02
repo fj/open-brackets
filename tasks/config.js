@@ -15,6 +15,7 @@ var self = module.exports = {
   },
 
   sharedConfiguration: {
+    siteRemoteAssetsURI: 'site-assets.jxf.me',
     siteRootDirectoryName: 'blog',
     themeName: 'jxf-theme',
     assetManifestName: 'rev-manifest.json',
