@@ -10,10 +10,12 @@
               <!-- {% include icon.html post_or_event=include.list_item %} --> &nbsp;
 
               <!-- [TODO] Date partial goes here. -->
-              <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02 15:04" .date }}">
-                {{ dateFormat "2006-01-02" .date }}
-              </time>
 
+              {{/*
+                  <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02" .date }}">
+                      {{ dateFormat "2006-01-02" .date }}
+                  </time>
+              */}}
             </span>
           </small>
         </div>
