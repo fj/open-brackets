@@ -1,7 +1,6 @@
-<div class="block">
-  <div class="list-meta-title">
+  <div class="list-title">
     recent {{ .resourceType }}
-    <a href="{{ (.content.Site.GetPage "section" .resourceType).Permalink }}" class="list-meta-all" title="see all {{ .resourceType }}">see all</a>
+    <a href="{{ (.content.Site.GetPage "section" .resourceType).Permalink }}" class="list-title__all" title="see all {{ .resourceType }}">see all</a>
   </div>
 
   <ul class="list">
@@ -11,4 +10,3 @@
       {{ partial ($partialName | string) . }}
     {{ end }}
   </ul>
-</div>

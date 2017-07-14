@@ -286,3 +286,20 @@
     flex-basis: 100%;
   }
 }
+
+// Semantic grid classes
+.container {
+  @extend .measure;
+}
+
+.container--lg {
+  @extend .measure--lg;
+}
+
+.grid {
+  @extend .g;
+}
+
+.grid-row {
+  @extend .g-r;
+}

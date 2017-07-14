@@ -1,51 +1,56 @@
-.list-meta-title {
-  margin-top: 2.414rem;
-}
-
-.list-meta-title {
-  @extend .caps;
-  @extend .muted;
-  @extend .sans;
-  @extend .bold;
-
-  border-bottom: thin solid $off-white-dark;
-}
-
-.list-meta-all {
-  @extend .right;
-  @extend .thin;
-}
-
 .list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.list-item:first-child {
-  margin-top: 0;
-  padding-top: 0;
+.list-title {
+  @extend .caps;
+  @extend .muted;
+  @extend .sans;
+  @extend .bold;
+
+  margin-top: 2.414rem;
+  border-bottom: thin solid $off-white-dark;
 }
 
-.list-item:last-child {
-  border-bottom: none;
-  padding-bottom: 2.827rem;
+.list-title__all {
+  @extend .right;
+  @extend .thin;
 }
+
 
 .list-item {
   margin: 0;
   padding: 0 0 1rem;
+
+  &:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 2.827rem;
+  }
 }
 
 .list-item--compact {
-  margin: 0;
   padding: 0;
 }
 
-.list-item-title--compact {
+
+.list-item__title {
   margin: 0;
+  padding: 1rem 0;
+}
+
+.list-item__title--compact {
+  @extend .media-object;
+
   padding: .5rem 0;
   position: relative;
+
   .jf-i {
     font-size: 0.9em;
     position: absolute;
@@ -54,14 +59,12 @@
   }
 }
 
-/* Fix for home page icon misalignment */
-.home-list .jf-i {
-  top: .7em;
-}
 
-.list-item-title {
-  margin: 0;
-  padding: 1rem 0;
+.list-item__date {
+  @extend .media-object-figure;
+  @extend .muted;
+  @extend .small;
+  @extend .h5;
 }
 
 
@@ -77,7 +80,6 @@
   margin-bottom: $margin*3;
 }
 
-
 .list-item-description {
   margin-top: 1.5rem;
 }
@@ -92,6 +94,7 @@
 .list-item a:not(.link):active, {
   color: $link-color;
 }
+
 
 /* Hide icon next to title on smaller screens to optimize text space */
 @media (max-width: 70em) {

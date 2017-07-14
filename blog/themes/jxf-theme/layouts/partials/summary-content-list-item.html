@@ -1,22 +1,17 @@
 <li class="list-item list-item--compact">
   <a href="{{ .item.Permalink }}" title="{{ .title }}">
-    <div class="media-object list-item-title--compact">
-      <div class="media-object-figure">
-        <div class="h5 m0">
-          <small>
-            <span class="muted">
+    <div class="list-item__title list-item__title--compact">
+      <div class="list-item__date">
+        <!-- [TODO] Icon partial goes here. -->
+        <!-- {% include icon.html post_or_event=include.list_item %} --> &nbsp;
+        <i class="jf-i jf-i-thumbs-o-up"></i> <!-- here as a placeholder -->
 
-              <!-- [TODO] Icon partial goes here. -->
-              <!-- {% include icon.html post_or_event=include.list_item %} --> &nbsp;
-
-              <!-- [TODO] Date partial goes here. -->
-              <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02" .date }}">
-                {{ dateFormat "2006-01-02" .date }}
-              </time>
-            </span>
-          </small>
-        </div>
+        <!-- [TODO] Date partial goes here. -->
+        <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02" .date }}">
+          {{ dateFormat "Jan 02" .date }}
+        </time>
       </div>
+
       <div class="media-object-body">
         <div class="h5 m0">
           {{ .title }}
