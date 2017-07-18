@@ -1,7 +1,7 @@
 <li class="list-item list-item--compact">
   <a href="{{ .item.Permalink }}" title="{{ .title }}">
-    <div class="list-item__title-row list-item__title-row--compact">
-      <div class="list-item__date">
+    <div class="content-item__row">
+      <div class="content-item__meta list-item__date">
         <small>
           <!-- [TODO] Icon partial goes here. -->
           <!-- {% include icon.html post_or_event=include.list_item %} --> &nbsp;
@@ -14,8 +14,10 @@
         </small>
       </div>
 
-      <div class="list-item__title">
+      <div class="content-item__body">
+        <h4 class="content-item__title">
           {{ .title }}
+        </h4>
       </div>
     </div>
   </a>

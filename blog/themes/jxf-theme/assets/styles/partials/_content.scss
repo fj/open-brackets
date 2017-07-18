@@ -1,0 +1,26 @@
+//
+// Styles for all content items
+//
+
+.content-item {}
+
+.content-item__title {
+  margin-top: $margin*3;
+  margin-bottom: $margin*2;
+}
+
+.content-item__row {
+  @extend .media-object;
+}
+
+.content-item__meta {
+  @extend .media-object-figure;
+}
+
+.content-item__body {
+  @extend .media-object-body;
+}
+
+.content-item__icon {}
+
+.content-item__date {}

@@ -1,3 +1,13 @@
+//
+// A list with links to content
+//
+
+.list-container {
+  @extend .p1;
+  @extend .mx1;
+  @extend .g-r-c-6-12;
+}
+
 .list {
   list-style-type: none;
   margin: 0;
@@ -34,45 +44,43 @@
   }
 }
 
-.list-item--compact {
-  padding: 0;
-}
-
-.list-item__title {
-  @extend .media-object-body;
-  @extend .h4;
-  @extend .m0;
-}
-
 .list-item__title-row {
-  margin: 0;
   padding: 1rem 0;
-}
-
-.list-item__title-row--compact {
-  @extend .media-object;
-  padding: .5rem 0;
-  position: relative;
+  margin: 0;
 }
 
 .list-item__date {
-  @extend .media-object-figure;
   @extend .muted;
-  @extend .h4;
+  @extend .m0;
 
   .jf-i {
     font-size: 0.9em;
     position: absolute;
-    top: 0.5em;
     left: -1.45em;
+    top: 1em;
+  }
+}
+
+//
+// Modifier for content items inside
+// a compact list
+//
+.list-item--compact {
+  padding: 0;
+
+  .content-item__row {
+    @extend .h4;
+    padding: .5rem 0;
+    position: relative;
+  }
+
+  .content-item__title {
+    margin: 0;
   }
 }
 
 
-.list-item-solo-title {
-  margin-top: $margin*3;
-  margin-bottom: $margin*2;
-}
+
 
 .list-item-solo-metadata {
   @extend .muted;
@@ -105,7 +113,7 @@
 }
 
 @media (max-width: 72em) {
-  .blog_post .jf-i {
+  .entry .jf-i {
     display: none;
   }
   .event_post .jf-i {
