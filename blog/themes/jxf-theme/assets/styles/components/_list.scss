@@ -77,7 +77,13 @@
   .content-item__title {
     margin: 0;
   }
+
+  .content-item__meta {
+    text-align: left;
+  }
 }
+
+
 
 
 
@@ -87,10 +93,6 @@
   border-bottom: 1px solid $off-white-dark;
   padding-bottom: $margin*3;
   margin-bottom: $margin*3;
-}
-
-.list-item-description {
-  margin-top: 1.5rem;
 }
 
 .list-item a:not(.link),

@@ -15,12 +15,29 @@
 
 .content-item__meta {
   @extend .media-object-figure;
+  @extend .txt--right;
+  @extend .mr1;
 }
 
 .content-item__body {
   @extend .media-object-body;
 }
 
-.content-item__icon {}
+.content-item__icon {
+  .jf-i {
+    font-size: 0.9em;
+    position: absolute;
+    top: 0.5em;
+    left: -1.45em;
+  }
+
+}
 
 .content-item__date {}
+
+//
+// Tag/post list
+//
+.content-item__description {
+  margin-top: 1.5rem;
+}

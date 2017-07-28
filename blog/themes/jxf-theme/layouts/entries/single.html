@@ -1,58 +1,51 @@
 {{ define "content" }}
-  [TODO] This is a reference entry; the <tt>single</tt> template for <tt>entry</tt> content is yet completed.
 
-  <!-- Sample post -->
-  <div class="container-lg content">
+  <div class="container--lg content-single">
     <div class="content-item__row">
-      <div class="content-item__meta media-object-figure mr1 txt--right">
-        <h3 class="list-item-title--compact">
+      <div class="content-item__meta">
+        <h3 class="content-item__icon">
           <i class="jf-i jf-i-file"></i>
         </h3>
 
         <div class="muted--2x">
-          <time class="content-item__date" datetime="2015-08-04 06:00:00 -0400" title="08-04-15 @ 06:00:00">2015-08-04</time>
+          <time class="content-item__date" datetime="{{ .Date }}" title="{{ .Date.Format "2006-01-02 @ 15:04:05" }}">{{ .Date.Format "2006-01-02" }}</time>
 
           <br>
 
-          379 words
+          {{ .WordCount }} words
 
-          <div class="post-categories">
-              <div class="post-category">
-                <a href="/tag/post" title="post" class="dotted-link caps">post</a>
-              </div>
-
-              <div class="post-category">
-                <a href="/tag/pivotal" title="pivotal" class="dotted-link caps">pivotal</a>
-              </div>
-
-              <div class="post-category">
-                <a href="/tag/work" title="work" class="dotted-link caps">work</a>
-              </div>
-
-          </div>
+          {{ with .Params.tags }}
+            <div class="post-categories">
+              {{ range . }}
+                <div class="post-category">
+                  <a href="{{ "tags" | absURL }}{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
         </div>
       </div>
 
       <div class="content-item__body">
-        <h3 class="content-item__title list-item-title--compact list-item-solo-title">
-          Content Title
+        <h3 class="content-item__title">
+          {{ .Title }}
         </h3>
 
-        <div class="list-item-description">
-          Content Description
-        </div>
-
         <article class="markdown-content">
-          <p>I like to think of myself as a relatively curious person, and as a professional who builds software, that often has a lot of benefits. But one big downside is that I have a lot of itches to scratch, and I’ve never been able to satisfy them by doing just one thing. I love what our team has built at <a href="http://uphex.com">UpHex</a> and the work we’re doing to make analytics monitoring easy for businesses everywhere. I wanted to continue using that expertise in a way that was bigger than any one company, but I wasn’t sure how to do it.</p>
-
-          <p>I recently caught up with a friend and colleague at <a href="https://pivotal.io">Pivotal</a> over lunch, and was astounded to hear about some of the things they’re working on. While I can’t disclose all of the internal details of what’s happening under the covers, there’s already a lot of public evidence that Pivotal is an engineering powerhouse that’s building incredible things. They are primary contributors to some of the biggest open-source enterprise projects, like <a href="https://spring.io">Spring</a>, <a href="https://www.cloudfoundry.org/">Cloud Foundry</a>, and <a href="http://geode.incubator.apache.org/">Geode</a>. And they provide one of the core infrastructure pieces of many modern software projects: <a href="https://www.pivotaltracker.com">Pivotal Tracker</a>.</p>
-
-          <p>Overall, they’re a startup that’s serious about a business strategy with open source at its core. That’s something almost no other company can say, and I was impressed by the depth of the commitment there. Even more importantly, Pivotal’s jam-packed full of people smarter than I am. Everyone learns differently, but I do it primarily by immersing myself in folks that are more experienced than I am, and then immersing myself in a difficult problem while surrounded by those folks. Pivotal looked like a great fit from this perspective.</p>
-
-          <p>After learning more about each other and explaining our goals, Pivotal asked if I’d consider becoming an advisory field engineer. I loved the idea of combining strategic, high-level exploration of business needs with practical, real-world engineering solutions, and it was an instant yes for me.</p>
-
-          <p>So, effective August 1, 2015, I’ve joined Pivotal. Of course, I’ll continue to be a principal in UpHex with my wonderful cofounder <a href="https://twitter.com/justthekipp">Bradley Kipp</a>, who is both a marvelous human being and a whip-smart businessperson. I’m looking forward to more new and exciting adventures with both companies!</p>
+          {{ .Content }}
         </article>
+
+        <div class="relative-navigation">
+          {{ with .PrevInSection }}
+            <a href="{{.Permalink}}" class="previous">&laquo; {{.Title}}</a>
+          {{ end }}
+
+          {{ with .NextInSection }}
+            <a href="{{.Permalink}}" class="next">{{.Title}} &raquo;</a>
+          {{ end }}
+
+          <div class="clearfix"></div>
+        </div>
       </div>
     </div>
   </div>
