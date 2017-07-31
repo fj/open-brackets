@@ -1,0 +1,39 @@
+{{ define "content" }}
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    {{ $section := where .Data.Pages "Section" .Section }}
+
+    <ul class="list">
+      {{ range  $section }}
+
+        <!-- Yes this should be a partial, issues with Hugo rendering a partial correctly here... need mapper? -->
+
+        <li class="list-item">
+          <a href="{{ .Permalink }}" title="{{ .Title }}">
+            <h3 class="content-item__title">
+              <!-- [TODO] Icon partial goes here. -->
+              <i class="jf-i jf-i-file"></i> <!-- here as a placeholder -->
+
+              {{ .Params.name }}
+            </h3>
+
+            <p class="content-item__description">
+              <time class="italic" title="{{ .Date }}">
+                {{ .Params.event.date_range }}
+              </time> &nbsp;
+
+              <br>
+
+              {{ .Content }}
+
+              <br>
+            </p>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

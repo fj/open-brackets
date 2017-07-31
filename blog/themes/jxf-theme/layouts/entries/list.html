@@ -2,11 +2,11 @@
   <div class="container">
     <h1>{{ .Title }}</h1>
 
-    {{.Content}}
+    {{ .Content }}
 
     <ul class="list">
-      {{ range where .Data.Pages "Section" "events" }}
-        {{ partial "list-item.html" }}
+      {{ range .Data.Pages }}
+        {{ .Render "li" }}
       {{ end }}
     </ul>
   </div>

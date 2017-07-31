@@ -1,20 +1,20 @@
 <li class="list-item">
-  <a href="[[ .Permalink ]]" title="[[ .Title ]]">
+  <a href="{{ .Permalink }}" title="{{ .Title }}">
     <h3 class="content-item__title">
       <!-- [TODO] Icon partial goes here. -->
       <i class="jf-i jf-i-thumbs-o-up"></i> <!-- here as a placeholder -->
 
-      [[ .Title ]]
+      {{ .Title }}
     </h3>
 
     <p class="content-item__description">
       <time class="italic" title="[[ .Date ]]">
-        [[ .Date ]]
+        {{ .Date }}
       </time> &nbsp;
 
       <br>
 
-      [[ .Content ]]
+      {{ .Content }}
 
       <br>
     </p>
