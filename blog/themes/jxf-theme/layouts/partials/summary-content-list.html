@@ -1,12 +1,12 @@
-  <div class="list-title">
-    recent {{ .resourceType }}
-    <a href="{{ (.content.Site.GetPage "section" .resourceType).Permalink }}" class="list-title__all" title="see all {{ .resourceType }}">see all</a>
-  </div>
+<div class="summary-title">
+  recent {{ .resourceType }}
+  <a href="{{ (.content.Site.GetPage "section" .resourceType).Permalink }}" class="summary-title__all" title="see all {{ .resourceType }}">see all</a>
+</div>
 
-  <ul class="list">
-    {{ $partialName := delimit (slice "mappers/item-mapper-" .resourceType ".html") "" }}
+<ul class="summary">
+  {{ $partialName := delimit (slice "mappers/item-mapper-" .resourceType ".html") "" }}
 
-    {{ range where (.content.Site.RegularPages.ByParam .sortKey).Reverse "Section" .resourceType }}
-      {{ partial ($partialName | string) . }}
-    {{ end }}
-  </ul>
+  {{ range where (.content.Site.RegularPages.ByParam .sortKey).Reverse "Section" .resourceType }}
+    {{ partial ($partialName | string) . }}
+  {{ end }}
+</ul>

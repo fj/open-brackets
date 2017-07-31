@@ -1,32 +1,7 @@
-//
-// A list with links to content
-//
-
-.list-container {
-  @extend .p1;
-  @extend .mx1;
-  @extend .g-r-c-6-12;
-}
-
 .list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.list-title {
-  @extend .caps;
-  @extend .muted;
-  @extend .sans;
-  @extend .bold;
-
-  margin-top: 2.414rem;
-  border-bottom: thin solid $off-white-dark;
-}
-
-.list-title__all {
-  @extend .right;
-  @extend .thin;
 }
 
 .list-item {
@@ -42,83 +17,15 @@
     border-bottom: none;
     padding-bottom: 2.827rem;
   }
-}
 
-.list-item__title-row {
-  padding: 1rem 0;
-  margin: 0;
-}
-
-.list-item__date {
-  @extend .muted;
-  @extend .m0;
-
-  .jf-i {
-    font-size: 0.9em;
-    position: absolute;
-    left: -1.45em;
-    top: 1em;
-  }
-}
-
-//
-// Modifier for content items inside
-// a compact list
-//
-.list-item--compact {
-  padding: 0;
-
-  .content-item__row {
-    @extend .h4;
-    padding: .5rem 0;
-    position: relative;
+  & a:not(.link),
+  & a:not(.link):visited {
+    color: $text-color;
   }
 
-  .content-item__title {
-    margin: 0;
-  }
-
-  .content-item__meta {
-    text-align: left;
-  }
-}
-
-
-
-
-
-
-.list-item-solo-metadata {
-  @extend .muted;
-  border-bottom: 1px solid $off-white-dark;
-  padding-bottom: $margin*3;
-  margin-bottom: $margin*3;
-}
-
-.list-item a:not(.link),
-.list-item a:not(.link):visited {
-  color: $text-color;
-}
-
-.list-item a:not(.link):focus,
-.list-item a:not(.link):hover,
-.list-item a:not(.link):active, {
-  color: $link-color;
-}
-
-
-/* Hide icon next to title on smaller screens to optimize text space */
-@media (max-width: 70em) {
-  .blog_post_list .jf-i {
-    display: none;
-  }
-}
-
-@media (max-width: 72em) {
-  .entry .jf-i {
-    display: none;
-  }
-  .event_post .jf-i {
-    display: none;
+  & a:not(.link):focus,
+  & a:not(.link):hover,
+  & a:not(.link):active, {
+    color: $link-color;
   }
 }
