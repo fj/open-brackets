@@ -14,7 +14,7 @@
       <div class="post-categories">
         {{ range . }}
           <div class="post-category">
-            <a href="{{ "tags" | absURL }}{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
+            <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
           </div>
         {{ end }}
       </div>

@@ -1,0 +1,11 @@
+{{ define "content" }}
+  <div class="container--lg entry-list">
+    <h2 class="h2">Posts Tagged “{{ .Title }}”</h2>
+
+    <ul class="list">
+      {{ range .Data.Pages }}
+        {{ .Render "li" }}
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

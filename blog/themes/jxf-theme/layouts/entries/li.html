@@ -3,17 +3,17 @@
 
   <div class="content-item__body">
     <h3 class="content-item__title">
-      <a href="{{ .Permalink }}" title="{{ .Title }}">        
+      <a href="{{ .Permalink }}" title="{{ .Title }}">
         {{ .Title }}
       </a>
     </h3>
 
     {{ .Summary }}
 
-    <strong>
+    <div class="content-item__more">
       <a href="{{ .Permalink }}" title="Read {{ .Title }}">
         Read more...
       </a>
-    </strong>
+    </div>
   </div>
 </li>

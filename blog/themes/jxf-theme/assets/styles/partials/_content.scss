@@ -2,8 +2,6 @@
 // Styles for all content items
 //
 
-.content-item {}
-
 .content-item__title {
   margin-top: $margin*3;
   margin-bottom: $margin*2;
@@ -30,14 +28,13 @@
     top: 0.5em;
     left: -1.45em;
   }
-
 }
 
-.content-item__date {}
+.content-item__more {
+  font-weight: bold;
+  display: block;
+}
 
-//
-// Tag/post list
-//
 .content-item__description {
   margin-top: 1.5rem;
 }
