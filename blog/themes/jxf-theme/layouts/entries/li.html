@@ -1,22 +1,19 @@
-<li class="list-item">
-  <a href="{{ .Permalink }}" title="{{ .Title }}">
-    <h3 class="content-item__title">
-      <!-- [TODO] Icon partial goes here. -->
-      <i class="jf-i jf-i-thumbs-o-up"></i> <!-- here as a placeholder -->
+<li class="list-item content-item__row">
+  {{ partial "entry-meta.html" . }}
 
-      {{ .Title }}
+  <div class="content-item__body">
+    <h3 class="content-item__title">
+      <a href="{{ .Permalink }}" title="{{ .Title }}">        
+        {{ .Title }}
+      </a>
     </h3>
 
-    <p class="content-item__description">
-      <time class="italic" title="[[ .Date ]]">
-        {{ .Date }}
-      </time> &nbsp;
+    {{ .Summary }}
 
-      <br>
-
-      {{ .Content }}
-
-      <br>
-    </p>
-  </a>
+    <strong>
+      <a href="{{ .Permalink }}" title="Read {{ .Title }}">
+        Read more...
+      </a>
+    </strong>
+  </div>
 </li>

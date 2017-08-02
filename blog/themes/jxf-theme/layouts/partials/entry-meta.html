@@ -1,0 +1,23 @@
+<div class="content-item__meta">
+  <h3 class="content-item__icon">
+    <i class="jf-i jf-i-file"></i>
+  </h3>
+
+  <div class="muted--2x">
+    <time class="content-item__date" datetime="{{ .Date }}" title="{{ .Date.Format "2006-01-02 @ 15:04:05" }}">{{ .Date.Format "2006-01-02" }}</time>
+
+    <br>
+
+    {{ .WordCount }} words
+
+    {{ with .Params.tags }}
+      <div class="post-categories">
+        {{ range . }}
+          <div class="post-category">
+            <a href="{{ "tags" | absURL }}{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>

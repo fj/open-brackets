@@ -1,6 +1,10 @@
 {{ define "content" }}
-  <div class="container">
-    <h1>{{ .Title }}</h1>
+  <div class="container entry-list">
+    <h1 class="h2">{{ .Title }}</h1>
+
+    {{ if .Description }}
+      <h2 class="h4 py1">{{ .Description }}</h2>
+    {{ end}}
 
     {{ .Content }}
 

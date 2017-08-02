@@ -86,16 +86,8 @@
 
 
 /* Hide icon next to title on smaller screens to optimize text space */
-@media (max-width: 70em) {
-  .blog_post_list .jf-i {
-    display: none;
-  }
-}
 
 @media (max-width: 72em) {
-  .entry .jf-i {
-    display: none;
-  }
   .event_post .jf-i {
     display: none;
   }
