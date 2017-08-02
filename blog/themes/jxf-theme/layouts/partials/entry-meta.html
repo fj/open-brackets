@@ -11,13 +11,11 @@
     {{ .WordCount }} words
 
     {{ with .Params.tags }}
-      <div class="post-categories">
-        {{ range . }}
-          <div class="post-category">
-            <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
-          </div>
-        {{ end }}
-      </div>
+      {{ range . }}
+        <div class="content-item__taxonomy">
+          <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
+        </div>
+      {{ end }}
     {{ end }}
   </div>
 </div>

@@ -1,5 +1,5 @@
 {{ define "content" }}
-  <div class="container--lg entry">
+  <div class="container--lg content-item">
     <div class="content-item__row">
       {{ partial "entry-meta.html" . }}
 
@@ -8,11 +8,11 @@
           {{ .Title }}
         </h3>
 
-        <article class="entry-markdown">
+        <article class="content-item__markdown">
           {{ .Content }}
         </article>
 
-        <div class="relative-navigation">
+        <div class="pagination">
           {{ with .PrevInSection }}
             <a href="{{.Permalink}}" class="previous">&laquo; {{.Title}}</a>
           {{ end }}

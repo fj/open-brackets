@@ -288,7 +288,12 @@
   }
 }
 
+//
 // Semantic grid classes
+.full-width {
+  width: 100%;
+}
+
 .container {
   @extend .measure;
 }

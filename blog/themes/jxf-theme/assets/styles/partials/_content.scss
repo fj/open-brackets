@@ -1,6 +1,14 @@
 //
-// Styles for all content items
+// Content items: single entries, entries in lists, event entries
 //
+
+.content-item {
+  @media (max-width: 72em) {
+    .jf-i {
+      display: none;
+    }
+  }
+}
 
 .content-item__title {
   margin-top: $margin*3;
@@ -37,4 +45,62 @@
 
 .content-item__description {
   margin-top: 1.5rem;
+}
+
+.content-item__taxonomy {
+  display: block;
+}
+
+.content-item__markdown {
+  p, ul, ol {
+    margin-bottom: 0.9775rem;
+    margin-top: 0;
+  }
+
+  h1 {
+    margin-top: 1.955rem;
+    margin-bottom: 0.9775rem;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.9775rem;
+  }
+
+  p img {
+    max-width: 85%;
+    margin: auto;
+  }
+
+  & > :not(canvas):not(.full-width) {
+    margin-left: 0;
+    width: 70%;
+
+    @media (max-width: 60em) {
+      width: 100%;
+    }
+  }
+}
+
+//
+// List of content items (list.html)
+.content-item__list {
+  .h2, .h4 {
+    text-align: center;
+  }
+
+  .list-item {
+    margin-bottom: $margin;
+    margin-top: $margin*2;
+  }
+
+  .content-item__title {
+    margin-top: 0;
+  }
+
+  @media (max-width: 70em) {
+    .jf-i {
+      display: none;
+    }
+  }
 }
