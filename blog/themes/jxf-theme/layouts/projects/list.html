@@ -1,0 +1,27 @@
+{{ define "content" }}
+  <div class="container--lg project-item__list">
+    <h1 class="h2">{{ .Title }}</h1>
+
+    {{ if .Description }}
+      <h2 class="h4">{{ .Description }}</h2>
+    {{ end}}
+
+    {{ .Content }}
+
+    {{ range $key, $value :=  (.Data.Pages.ByDate) }}
+      {{ if  mod $key 2 | eq 0  }}
+        <div class="grid-row project-item__row">
+      {{ end }}
+
+      <div class="g-r-c-6-12--md project-item__object">
+        {{ .Render "li" }}
+      </div>
+
+      {{ if not ($key | eq 0 ) }}
+        {{ if mod $key 2  }}
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
