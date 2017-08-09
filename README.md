@@ -41,7 +41,7 @@ gulp serve
 
 ## Code Style
 
-* When using semantic class names (i.e. `home-list` instead of `g-r-c-6-12`), extend any necessary unsemantic classes via Sass `@extends`, to avoid duplicating code.
+* When using semantic class names (i.e. `home-list` instead of `g-r-c-6-12`), extend any necessary unsemantic classes via Sass `@mixins`, to avoid duplicating code. (https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
 
 ```
 .home-list {

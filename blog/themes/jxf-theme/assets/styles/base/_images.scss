@@ -9,3 +9,13 @@ article img {
   border-top: thin solid $off-white;
   border-bottom: thin solid $off-white;
 }
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+}
