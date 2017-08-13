@@ -2,20 +2,20 @@ body {
   counter-reset: sidenote-counter;
 }
 
-input.margin-toggle { 
-  display: none; 
+input.margin-toggle {
+  display: none;
 }
 
-label.sidenote-number { 
-  display: inline; 
+label.sidenote-number {
+  display: inline;
 }
 
-label.margin-toggle:not(.sidenote-number) { 
-  display: none; 
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
 }
 
 .sidenote,
-.marginnote { 
+.marginnote {
   float: right;
   clear: right;
   margin-right: -50%;
@@ -29,11 +29,11 @@ label.margin-toggle:not(.sidenote-number) {
   position: relative;
 }
 
-.sidenote-number { 
-  counter-increment: sidenote-counter; 
+.sidenote-number {
+  counter-increment: sidenote-counter;
 }
 
-.sidenote-number:after, .sidenote:before { 
+.sidenote-number:after, .sidenote:before {
   content: counter(sidenote-counter) " ";
   position: relative;
   vertical-align: baseline;
@@ -41,35 +41,38 @@ label.margin-toggle:not(.sidenote-number) {
   font-size: 0.88rem;
 }
 
-.sidenote-number:after { 
+.sidenote-number:after {
   content: counter(sidenote-counter);
   font-size: 1rem;
   top: -0.5rem;
 }
 
-.sidenote:before { 
+.sidenote:before {
   content: counter(sidenote-counter) " ";
-  top: -0.5rem; 
+  top: -0.5rem;
   opacity: 0.75;
 }
 
-@media (max-width: 76em) { 
+@media (max-width: 76em) {
   .sidenote,
-  .marginnote { 
+  .marginnote {
     margin-right: -40%;
     width: 30%;
   }
 }
 
-@media (max-width: 60em) { 
-  label.margin-toggle:not(.sidenote-number) { 
-    display: inline; 
+@media (max-width: 60em) {
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
   }
-  .sidenote, .marginnote { 
-    display: none; 
+  
+  .sidenote,
+  .marginnote {
+    display: none;
   }
+
   .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote { 
+  .margin-toggle:checked + .marginnote {
     display: block;
     float: left;
     left: 1rem;
@@ -77,15 +80,18 @@ label.margin-toggle:not(.sidenote-number) {
     width: 95%;
     margin: 1rem 2.5%;
     vertical-align: baseline;
-    position: relative; 
+    position: relative;
   }
-  label { 
-    cursor: pointer; 
+
+  label {
+    cursor: pointer;
   }
+
   .margin-toggle {
     border-bottom: thin #444 dotted;
     color: #3498db;
   }
+
   .sidenote-number.sidenote-number {
     border-bottom: none;
   }

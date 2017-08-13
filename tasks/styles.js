@@ -12,7 +12,7 @@ gulp.task('styles', () => {
   var styleTaskForPath = (path) => {
     return gulp.src(path)
       .pipe(gdebug({title: 'styles[in]:'}))
-      .pipe(sass())
+      .pipe(sass({outputStyle: 'compressed'}))
       .pipe(gdebug({title: 'styles[sass]:'}))
       .pipe(autoprefixer('last 2 versions'))
       //.pipe(cleancss({advanced:false}))

@@ -15,6 +15,7 @@
 // COMPONENTS
 // - Reusable, modular components
 @import "components/font-awesome/font-awesome";
+@import "components/utilities";
 @import "components/borders";
 @import "components/categories";
 @import "components/colors";
@@ -28,11 +29,11 @@
 @import "components/syntax-highlighting";
 @import "components/text-utilities";
 @import "components/tufte";
-@import "components/utilities";
 
 // PARTIALS
 // - Styles for specific pages or sections
 @import "partials/content";
 @import "partials/header";
 @import "partials/hero";
+@import "partials/portfolio";
 @import "partials/projects";

@@ -1,4 +1,5 @@
-img, canvas {
+img,
+canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -8,14 +9,4 @@ article img {
   margin-top: 0.5rem;
   border-top: thin solid $off-white;
   border-bottom: thin solid $off-white;
-}
-
-img,
-canvas,
-iframe,
-video,
-svg,
-select,
-textarea {
-  max-width: 100%;
 }

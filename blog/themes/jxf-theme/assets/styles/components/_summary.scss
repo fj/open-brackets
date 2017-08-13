@@ -14,17 +14,16 @@
 
 .summary-title {
   @extend .caps;
-  @extend .muted;
-  @extend .sans;
-  @extend .bold;
 
+  font-weight: bold;
+  font-family: $sans-font-family;
   margin-top: 2.414rem;
   border-bottom: thin solid $off-white-dark;
 }
 
 .summary-title__all {
-  @extend .right;
-  @extend .thin;
+  font-weight: 100;
+  float: right;
 }
 
 .summary-item {
@@ -67,28 +66,5 @@
 
   .content-item__meta {
     text-align: left;
-  }
-}
-
-
-
-
-
-
-.list-item-solo-metadata {
-  @extend .muted;
-  border-bottom: 1px solid $off-white-dark;
-  padding-bottom: $margin*3;
-  margin-bottom: $margin*3;
-}
-
-
-
-
-/* Hide icon next to title on smaller screens to optimize text space */
-
-@media (max-width: 72em) {
-  .event_post .jf-i {
-    display: none;
   }
 }

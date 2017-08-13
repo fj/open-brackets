@@ -3,6 +3,7 @@ table {
   margin: 2rem 0;
   font-size: 1rem;
   padding: 0;
+
   tr {
     border-top: 1px solid #cccccc;
     background-color: white;
@@ -25,31 +26,36 @@ table {
       padding: 6px 13px;
     }
   }
-}
 
-table.rotated-text {
-  tr:first-child {
-    border: none;
-  }
-  th {
-    height: 6em;
-    border: none;
-    background: none;
-    transform: translateX(1em) rotate(-45deg);
-    transform-origin: left bottom;
-    vertical-align: bottom;
-    white-space: nowrap;
-  }
-  th:first-child {
-    transform: none;
-  }
-}
+  &.rotated-text {
+    tr:first-child {
+      border: none;
+    }
 
-table tr th :first-child,
-table tr td :first-child {
-  margin-top: 0;
-}
-table tr th :last-child,
-table tr td :last-child {
-  margin-bottom: 0;
+    th {
+      height: 6em;
+      border: none;
+      background: none;
+      transform: translateX(1em) rotate(-45deg);
+      transform-origin: left bottom;
+      vertical-align: bottom;
+      white-space: nowrap;
+
+      &:first-child {
+        transform: none;
+      }
+    }
+  }
+
+  & tr th {
+    &:first-child,
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child,
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
