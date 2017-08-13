@@ -4,11 +4,11 @@
 
     {{ .Content }}
 
-    {{ $section := where .Data.Pages "Section" .Section }}
+    {{ $section := where .Data.Pages.ByDate.Reverse "Section" .Section }}
 
     <ul class="list">
       {{ range  $section }}
-        {{ partial "list-item__event.html" . }}
+        {{ .Render "li" }}
       {{ end }}
     </ul>
   </div>

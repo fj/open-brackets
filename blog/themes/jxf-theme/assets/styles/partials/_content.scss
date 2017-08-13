@@ -2,7 +2,7 @@
 // Content items: single entries, entries in lists, event entries
 //
 
-.content-item {
+.content-item {  // ??
   @media (max-width: 72em) {
     .jf-i {
       display: none;
@@ -83,6 +83,8 @@
 }
 
 //
+// Page specific overrides
+
 // List of content items (list.html)
 .content-item__list {
   .h2, .h4 {
@@ -102,5 +104,20 @@
     .jf-i {
       display: none;
     }
+  }
+}
+
+// Single event page (events/single.html)
+.content-item__event {
+  .content-item__title,
+  .content-item__icon {
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .jf-i {
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
