@@ -4,8 +4,7 @@
       <div class="content-item__meta list-item__date">
         <small>
           <!-- [TODO] Icon partial goes here. -->
-          <!-- {% include icon.html post_or_event=include.list_item %} --> &nbsp;
-          <i class="jf-i jf-i-thumbs-o-up"></i> <!-- here as a placeholder -->
+          {{ partial "icon.html" }}
 
           <!-- [TODO] Date partial goes here. -->
           <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02" .date }}">
