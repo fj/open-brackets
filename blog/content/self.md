@@ -1,5 +1,6 @@
 ---
 title:  About Me
+layout: "contact"
 ---
 
 > <div style="white-space: pre">Still hangs the hedge without a gust,
@@ -30,5 +31,3 @@ More about me:
 * Talk to me [on Twitter](http://twitter.com/jxxf).
 
 * Or reach out via this form:
-
-{% include contact.html %}

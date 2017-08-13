@@ -1,0 +1,15 @@
+{{ define "content" }}
+  <div class="container--lg">
+    <h1 class="h2 txt--center">{{ .Title }}</h1>
+
+    <div class="content-item__row">
+      <div class="content-item__body">
+        <article class="content-item__markdown">
+          {{ .Content }}
+
+          {{ partial "contact.html" . }}
+        </article>
+      </div>
+    </div>
+  </div>
+{{ end }}
