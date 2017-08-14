@@ -1,5 +1,10 @@
 ---
 title:  Colophon
+
+menu:
+  main:
+    weight: 40
+    name: "Meta"
 ---
 
 # Site
