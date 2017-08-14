@@ -2,6 +2,7 @@
 .measure--lg {
   margin: 0 auto;
   padding: 0 .5rem;
+  position: relative;
 }
 
 .measure {
@@ -285,4 +286,26 @@
     max-width: 100%;
     flex-basis: 100%;
   }
+}
+
+//
+// Semantic grid classes
+.full-width {
+  width: 100%;
+}
+
+.container {
+  @extend .measure;
+}
+
+.container--lg {
+  @extend .measure--lg;
+}
+
+.grid {
+  @extend .g;
+}
+
+.grid-row {
+  @extend .g-r;
 }

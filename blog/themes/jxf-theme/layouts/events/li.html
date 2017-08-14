@@ -1,0 +1,27 @@
+<li class="list-item">
+  <a href="{{ .Permalink }}" title="{{ .Title }}">
+    <h3 class="content-item__title">
+      {{ if .Title }}
+        {{ .Title}}
+      {{ else }}
+        {{ .Params.name }}
+      {{ end }}
+    </h3>
+
+    <p class="content-item__description">
+      <time class="italic" title="{{ .Date }}">
+        {{ .Params.event.date_range }}
+      </time> &nbsp;
+
+      <br />
+
+      {{ if .Params.description }}
+        {{ .Params.description }}
+      {{ else }}
+        {{ .Summary }}
+      {{ end }}
+
+      <br />
+    </p>
+  </a>
+</li>

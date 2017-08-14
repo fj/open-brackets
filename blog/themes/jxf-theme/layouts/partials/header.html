@@ -3,28 +3,19 @@
     <div class="header-brand">
       <a href="/" title="{{ .Site.Title }}">{ jxf }</a>
     </div>
+
+    {{ $currentPage := . }}
+
     <nav class="header-nav">
-      <div class="header-nav-item">
-        <!-- section is 'blog' or 'entries' -->
-        <a href="/blog" title="blog">blog</a>
-      </div>
-      <div class="header-nav-item">
-        <!-- section is 'work' -->
-        <a href="/portfolio" title="work">work</a>
-      </div>
-      <div class="header-nav-item">
-        <!-- section is 'events' -->
-        <a href="/events" title="events">events</a>
-      </div>
-      <div class="header-nav-item">
-        <!-- section is 'meta' -->
-        <a href="/meta" title="meta">meta</a>
-      </div>
-      <div class="header-nav-item">
-        <!-- section is 'self' -->
-        <a href="/self" title="self">self</a>
-      </div>
+      {{ range .Site.Menus.main }}
+        <div class="header-nav-item">
+          <a href="{{.URL}}" class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+            {{ .Name }}
+          </a>
+        </div>
+      {{ end }}
     </nav>
+
     <div class="clearfix"></div>
   </div>
 </header>

@@ -22,7 +22,7 @@ label.margin-toggle:not(.sidenote-number) {
   width: 40%;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: $serif-font-family;
+  font-family: $sans-font-family__alt;
   font-size: 0.88rem;
   opacity: 0.75;
   vertical-align: baseline;
@@ -37,7 +37,7 @@ label.margin-toggle:not(.sidenote-number) {
   content: counter(sidenote-counter) " ";
   position: relative;
   vertical-align: baseline;
-  font-family: $serif-font-family;
+  font-family: $sans-font-family__alt;
   font-size: 0.88rem;
 }
 

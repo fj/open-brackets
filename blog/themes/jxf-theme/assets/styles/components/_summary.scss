@@ -1,0 +1,94 @@
+//
+// A list with links to content
+//
+
+.summary-container {
+  @extend .p1;
+  @extend .mx1;
+  @extend .g-r-c-6-12;
+}
+
+.summary {
+  @extend .list;
+}
+
+.summary-title {
+  @extend .caps;
+  @extend .muted;
+  @extend .sans;
+  @extend .bold;
+
+  margin-top: 2.414rem;
+  border-bottom: thin solid $off-white-dark;
+}
+
+.summary-title__all {
+  @extend .right;
+  @extend .thin;
+}
+
+.summary-item {
+  @extend .list-item;
+}
+
+.summary-item__title-row {
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.summary-item__date {
+  @extend .muted;
+  @extend .m0;
+
+  .jf-i {
+    font-size: 0.9em;
+    position: absolute;
+    left: -1.45em;
+    top: 1em;
+  }
+}
+
+//
+// Modifier for content items inside
+// a compact list
+//
+.summary-item--compact {
+  padding: 0;
+
+  .content-item__row {
+    @extend .h4;
+    padding: .5rem 0;
+    position: relative;
+  }
+
+  .content-item__title {
+    margin: 0;
+  }
+
+  .content-item__meta {
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+.list-item-solo-metadata {
+  @extend .muted;
+  border-bottom: 1px solid $off-white-dark;
+  padding-bottom: $margin*3;
+  margin-bottom: $margin*3;
+}
+
+
+
+
+/* Hide icon next to title on smaller screens to optimize text space */
+
+@media (max-width: 72em) {
+  .event_post .jf-i {
+    display: none;
+  }
+}

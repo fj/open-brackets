@@ -1,0 +1,55 @@
+.project-item__list {
+  .h2, .h4 {
+    text-align: center;
+  }
+
+  .h4 {
+    @extend .py1;
+  }
+
+  .project-item__title {
+    text-align: left;
+  }
+}
+
+.project-item__row {
+  border-bottom: thin solid $off-white-dark;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.project-item__object {
+  padding: $padding*2;
+}
+
+.project-item__title {
+  @extend .h4;
+
+  padding-top: 0;
+  margin-top: .75rem;
+}
+
+.project-item__subtitle {
+  @extend .muted--2x;
+  @extend .h5;
+
+  font-family: $sans-font-family;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: .75rem;
+
+  span {
+    @extend .px1;
+  }
+}
+
+.project-item__description {
+  @extend .small;
+
+  padding-top: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}

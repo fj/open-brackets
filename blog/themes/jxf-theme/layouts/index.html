@@ -1,53 +1,37 @@
 {{ define "content" }}
-<!--
-  <p>Welcome to the index page.</p>
-  <p>Here are the posts:</p>
-  <ul>
-    {{ range where .Data.Pages "Section" "entries" }}
-      <li>-- {{ .Title }} || {{ .Date.Format "2006-01-02 15:04" }} || {{ .Permalink }}</li>
-    {{ end }}
-  </ul>
--->
   <section class="hero">
-    <div class="measure--lg">
+    <div class="container--lg">
       <img src="https://s3.amazonaws.com/assets.jxf.me/images/jf.jpeg" alt="picture of John Feminella" class="hero-image">
+
       <h1 class="hero-title">
         {{ i18n "site.owner.name" }}
       </h1>
+
       <p class="hero-description caps">
         {{ i18n "site.owner.description" }}
       </p>
-      <!-- [TODO]: social links -->
+
       <nav class="social">
-        <a class="social-link" href="" title="me on Github">
-          <i class="jf-i jf-i-github social-link-icon"></i>
-        </a>
-        <a class="social-link" href="" title="me on Twitter">
-          <i class="jf-i jf-i-twitter social-link-icon"></i>
-        </a>
-        <a class="social-link" href="" title="me on LinkedIn">
-          <i class="jf-i jf-i-linkedin social-link-icon"></i>
-        </a>
-        <a class="social-link" href="" title="me on StackOverflow">
-          <i class="jf-i jf-i-stack-overflow social-link-icon"></i>
-        </a>
-        <a class="social-link" href="" title="Get in touch with me">
-          <i class="jf-i jf-i-envelope-o social-link-icon"></i>
-        </a>
+        {{ range $.Site.Data.index }}
+          {{ range .social_networks }}
+            <a class="social-link" href="{{ .link }}" title="{{ if .title }}{{ .title }}{{ else }}me on {{ .network }}{{ end }}">
+              <i class="jf-i {{ .icon }} social-link-icon"></i>
+            </a>
+          {{ end }}
+        {{ end }}
       </nav>
     </div>
   </section>
 
-  <div class="measure--lg">
-    <div class="g">
-      <div class="g-r">
-        <section class="g-r-c-6-12 p1 mx1 home-list">
+  <div class="container--lg">
+      <div class="grid-row">
+        <section class="summary-container">
           {{ partial "summary-content-list.html" (dict "resourceType" "entries" "sortKey" "date" "content" .) }}
         </section>
-        <section class="g-r-c-6-12 p1 mx1 home-list">
+
+        <section class="summary-container">
           {{ partial "summary-content-list.html" (dict "resourceType" "events" "sortKey" "event.date_range" "content" .) }}
         </section>
       </div>
-    </div>
   </div>
 {{ end }}

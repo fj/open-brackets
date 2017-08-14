@@ -1,0 +1,37 @@
+{{ if .Params.image }}
+  <img src="https://s3.amazonaws.com/assets.jxf.me/images/{{.Params.image }}" />
+{{ else }}
+  <img src="http://placehold.it/1200x600" />
+{{ end }}
+
+{{ if .Params.client }}
+  <h3 class="project-item__title">
+    {{ .Params.client }}
+  </h3>
+
+  <div class="project-item__subtitle muted--2x">
+    <span>{{ .Title }}</span> · <span>{{ .Params.date_range }}</span>
+  </div>
+{{ else }}
+  <h3 class="project-item__title">
+    <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+  </h3>
+{{ end }}
+
+<div class="project-item__description">
+  {{ if .Params.excerpt }}
+    {{ .Params.excerpt }}
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
+</div>
+
+{{ with .Params.tags }}
+  <div class="portfolio-categories">
+    {{ range . }}
+      <span class="portfolio-category">
+        <span class="caps">{{ . }}</span>
+      </span>
+    {{ end }}
+  </div>
+{{ end }}

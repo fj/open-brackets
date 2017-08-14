@@ -1,0 +1,21 @@
+social_networks:
+  - network: Github
+    icon: jf-i-github
+    link: https://github.com/fj
+
+  - network: Twitter
+    icon: jf-i-twitter
+    link: https://twitter.com/jxxf
+
+  - network: LinkedIn
+    icon: jf-i-linkedin
+    link: https://linkedin.com/in/johnxf
+
+  - network: StackOverflow
+    icon: jf-i-stack-overflow
+    link: https://stackoverflow.com/users/75170/john-feminella
+
+  - network: Email
+    title: "Get in touch with me"
+    icon: jf-i-envelope-o
+    link: /self#connect

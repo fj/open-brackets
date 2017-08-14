@@ -1,0 +1,125 @@
+//
+// Content items: single entries, entries in lists, event entries
+//
+
+.content-item {  // ??
+  @media (max-width: 72em) {
+    .jf-i {
+      display: none;
+    }
+  }
+}
+
+.content-item__title {
+  margin-top: $margin*3;
+  margin-bottom: $margin*2;
+}
+
+.content-item__row {
+  @extend .media-object;
+}
+
+.content-item__meta {
+  @extend .media-object-figure;
+  @extend .txt--right;
+  @extend .mr1;
+}
+
+.content-item__body {
+  @extend .media-object-body;
+}
+
+.content-item__icon {
+  .jf-i {
+    font-size: 0.9em;
+    position: absolute;
+    top: 0.5em;
+    left: -1.45em;
+  }
+}
+
+.content-item__more {
+  font-weight: bold;
+  display: block;
+}
+
+.content-item__description {
+  margin-top: 1.5rem;
+}
+
+.content-item__taxonomy {
+  display: block;
+}
+
+.content-item__markdown {
+  @extend .py2;
+
+  p, ul, ol {
+    margin-bottom: 0.9775rem;
+    margin-top: 0;
+  }
+
+  h1 {
+    margin-top: 1.955rem;
+    margin-bottom: 0.9775rem;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.9775rem;
+  }
+
+  p img {
+    max-width: 85%;
+    margin: auto;
+  }
+
+  & > :not(canvas):not(.full-width) {
+    margin-left: 0;
+    width: 70%;
+
+    @media (max-width: 60em) {
+      width: 100%;
+    }
+  }
+}
+
+//
+// Page specific overrides
+
+// List of content items (list.html)
+.content-item__list {
+  .h2, .h4 {
+    text-align: center;
+  }
+
+  .list-item {
+    margin-bottom: $margin;
+    margin-top: $margin*2;
+  }
+
+  .content-item__title {
+    margin-top: 0;
+  }
+
+  @media (max-width: 70em) {
+    .jf-i {
+      display: none;
+    }
+  }
+}
+
+// Single event page (events/single.html)
+.content-item__event {
+  .content-item__title,
+  .content-item__icon {
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .jf-i {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
