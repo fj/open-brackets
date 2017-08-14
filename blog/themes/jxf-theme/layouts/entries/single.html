@@ -23,6 +23,21 @@
 
           <div class="clearfix"></div>
         </div>
+
+        {{ if .Params.subscribers }}
+          <div class="subscribers muted--2x">
+            <h2>Want more?</h2>
+
+            {{ partial "subscribers.html"  . }}
+          </div>
+        {{ end }}
+
+        {{ if .Params.comments }}
+          <div class="comments">
+            <h2>Comments</h2>
+            {{ partial "comments.html"  . }}
+          </div>
+        {{ end }}
       </div>
     </div>
   </div>

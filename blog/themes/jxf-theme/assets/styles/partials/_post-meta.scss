@@ -1,6 +1,6 @@
 .pagination {
   @extend .my2;
-  
+
   width: 75%;
 
   .previous {
@@ -10,4 +10,15 @@
   .next {
     float: right;
   }
+}
+
+.subscribers {
+  @extend .my2;
+
+  border: 1px solid gray;
+  padding: 1rem;
+}
+
+.comments {
+  @extend .my2;
 }

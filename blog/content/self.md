@@ -1,5 +1,11 @@
 ---
 title:  About Me
+layout: "contact"
+
+menu:
+  main:
+    weight: 50
+    name: "Self"
 ---
 
 > <div style="white-space: pre">Still hangs the hedge without a gust,
@@ -30,5 +36,3 @@ More about me:
 * Talk to me [on Twitter](http://twitter.com/jxxf).
 
 * Or reach out via this form:
-
-{% include contact.html %}

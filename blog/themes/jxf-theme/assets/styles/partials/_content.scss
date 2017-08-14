@@ -53,6 +53,8 @@
 }
 
 .content-item__markdown {
+  @extend .py2;
+
   p, ul, ol {
     margin-bottom: 0.9775rem;
     margin-top: 0;

@@ -21,15 +21,20 @@
 
 .header-nav-item {
   display: inline;
-  padding: 0 .5rem;
-}
+  padding: 0 0 0 .5rem;
 
-.header-nav-item {
-  padding-right: 0;
-}
+  & .active {
+    font-weight: bold;
+  }
 
-.header-nav-item .active {
-  font-weight: bold;
+  &:after {
+    content: ' \0000b7';
+    margin-left: .5rem;
+  }
+
+  &:last-child:after {
+    content: '';
+  }
 }
 
 .header a,
@@ -41,13 +46,4 @@
 .header a:hover,
 .header a:active, {
   color: $link-color;
-}
-
-.header-nav-item:after {
-  content: ' \0000b7';
-  margin-left: .5rem;
-}
-
-.header-nav-item:last-child:after {
-  content: '';
 }
