@@ -1,5 +1,6 @@
 .project-item__list {
-  .h2, .h4 {
+  .h2,
+  .h4 {
     text-align: center;
   }
 
@@ -32,7 +33,6 @@
 }
 
 .project-item__subtitle {
-  @extend .muted--2x;
   @extend .h5;
 
   font-family: $sans-font-family;
@@ -46,8 +46,6 @@
 }
 
 .project-item__description {
-  @extend .small;
-
   padding-top: 0;
   margin: 0;
   line-height: 1.5;

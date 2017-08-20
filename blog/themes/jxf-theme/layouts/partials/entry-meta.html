@@ -13,7 +13,7 @@
     {{ with .Params.tags }}
       {{ range . }}
         <div class="content-item__taxonomy">
-          <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
+          <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="content-item__taxonomy-link dotted-link">{{ . }}</a>
         </div>
       {{ end }}
     {{ end }}

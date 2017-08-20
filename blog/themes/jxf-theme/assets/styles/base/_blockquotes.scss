@@ -1,0 +1,25 @@
+blockquote {
+  @extend .bg--off-white-light;
+  color: $text-color--light;
+  margin: 1rem auto 1rem;
+  padding: 1rem 1.5rem;
+
+  & *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  & *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  & footer cite {
+    @extend .small;
+    font-style: normal;
+  }
+
+  & footer cite:before {
+    content: '&emdash; ';
+  }
+}

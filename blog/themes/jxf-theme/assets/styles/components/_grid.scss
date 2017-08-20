@@ -13,17 +13,23 @@
   max-width: 64rem;
 }
 
+.full-width {
+  width: 100%;
+}
+
 .block {
   display: block;
   width: 100%;
 }
 
-.g {
+.g,
+.grid {
   padding-left: 0;
   padding-right: 0;
 }
 
-.g-r {
+.g-r,
+.grid-row {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -290,22 +296,10 @@
 
 //
 // Semantic grid classes
-.full-width {
-  width: 100%;
-}
-
 .container {
   @extend .measure;
 }
 
 .container--lg {
   @extend .measure--lg;
-}
-
-.grid {
-  @extend .g;
-}
-
-.grid-row {
-  @extend .g-r;
 }

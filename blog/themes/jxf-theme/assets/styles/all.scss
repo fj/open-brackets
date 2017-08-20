@@ -1,32 +1,39 @@
 @import "variables/base";
 
+// BASE
+// - Reset and default tag styles
+@import "base/normalize";
+@import "base/reset";
+@import "base/blockquotes";
+@import "base/code-blocks";
+@import "base/images";
+@import "base/links";
+@import "base/tables";
+@import "base/type-scale";
+@import "base/typography";
+
+// COMPONENTS
+// - Reusable, modular components
 @import "components/font-awesome/font-awesome";
-@import "components/hero";
-@import "components/header";
-@import "components/list";
-@import "components/summary";
+@import "components/borders";
+@import "components/categories";
+@import "components/colors";
+@import "components/grid";
 @import "components/icons";
-@import "components/social";
+@import "components/list";
 @import "components/media-object";
+@import "components/social";
+@import "components/summary";
+@import "components/syntax-highlighting";
+@import "components/text-utilities";
+@import "components/tufte";
+@import "components/utilities";
 
-@import "modules/reset";
-@import "modules/tables";
-@import "modules/colors";
-@import "modules/text-utilities";
-@import "modules/responsive-utilities";
-@import "modules/utilities";
-
-@import "partials/grid";
-@import "partials/links";
-@import "partials/images";
-@import "partials/borders";
-@import "partials/categories";
-@import "partials/typography";
-@import "partials/type-scale";
-@import "partials/projects";
-@import "partials/post-meta";
-@import "partials/code-blocks";
-@import "partials/blockquotes";
-@import "partials/syntax-highlighting";
-@import "partials/tufte";
+// PARTIALS
+// - Styles for specific pages or sections
 @import "partials/content";
+@import "partials/header";
+@import "partials/hero";
+@import "partials/portfolio";
+@import "partials/post-meta";
+@import "partials/projects";

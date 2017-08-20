@@ -2,14 +2,6 @@
 // Content items: single entries, entries in lists, event entries
 //
 
-.content-item {  // ??
-  @media (max-width: 72em) {
-    .jf-i {
-      display: none;
-    }
-  }
-}
-
 .content-item__title {
   margin-top: $margin*3;
   margin-bottom: $margin*2;
@@ -21,8 +13,9 @@
 
 .content-item__meta {
   @extend .media-object-figure;
-  @extend .txt--right;
   @extend .mr1;
+
+  text-align: right;
 }
 
 .content-item__body {
@@ -45,10 +38,18 @@
 
 .content-item__description {
   margin-top: 1.5rem;
+
+  time {
+    font-style: italic;
+  }
 }
 
 .content-item__taxonomy {
   display: block;
+}
+
+.content-item__taxonomy-link {
+  @extend .caps;
 }
 
 .content-item__markdown {
@@ -87,6 +88,16 @@
 //
 // Page specific overrides
 
+.content-item__entry,
+.content-item__event,
+.content-item__list {
+  @media (max-width: 72em) {
+    .jf-i {
+      display: none;
+    }
+  }
+}
+
 // List of content items (list.html)
 .content-item__list {
   .h2, .h4 {
@@ -100,12 +111,6 @@
 
   .content-item__title {
     margin-top: 0;
-  }
-
-  @media (max-width: 70em) {
-    .jf-i {
-      display: none;
-    }
   }
 }
 

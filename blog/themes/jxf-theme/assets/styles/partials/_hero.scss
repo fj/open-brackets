@@ -11,12 +11,12 @@
 }
 
 .hero-description {
+  @extend .caps;
+  
   font-size: 1.121rem;
   width: auto;
-}
 
-@media screen and (min-width: $screen-l) {
-  .hero-description {
+  @media screen and (min-width: $screen-l) {
     margin: 0 auto;
     width: 75%;
   }
