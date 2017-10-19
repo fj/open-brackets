@@ -44,6 +44,7 @@
   "dependencies": {
     "command-exists": "^1.2.2",
     "delete-empty": "^1.0.0",
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "npm": "^5.4.2"
   }
 }
