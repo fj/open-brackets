@@ -6,7 +6,7 @@
 <ul class="summary">
   {{ $partialName := delimit (slice "mappers/item-mapper-" .resourceType ".html") "" }}
 
-  {{ range where (.content.Site.RegularPages.ByParam .sortKey).Reverse "Section" .resourceType }}
+  {{ range first 5 (where (.content.Site.RegularPages.ByParam .sortKey).Reverse "Section" .resourceType) }}
     {{ partial ($partialName | string) . }}
   {{ end }}
 </ul>
