@@ -25,6 +25,10 @@
   @extend .mr1;
 }
 
+.content-item__info {
+    margin-top: $margin*1.8;
+}
+
 .content-item__body {
   @extend .media-object-body;
 }
