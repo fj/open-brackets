@@ -8,7 +8,7 @@
 
     {{ .Content }}
 
-    {{ range $key, $value :=  (.Data.Pages.ByDate) }}
+    {{ range $key, $value :=  (.Data.Pages.ByParam "date_range") }}
       {{ if  mod $key 2 | eq 0  }}
         <div class="grid-row project-item__row">
       {{ end }}
@@ -25,3 +25,4 @@
     {{ end }}
   </div>
 {{ end }}
+gi
