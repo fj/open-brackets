@@ -22,11 +22,11 @@
 .content-item__meta {
   @extend .media-object-figure;
   @extend .txt--right;
-  @extend .mr1;
+  @extend .mr2;
 }
 
 .content-item__info {
-    margin-top: $margin*1.8;
+    margin-top: $margin*3.5;
 }
 
 .content-item__body {
@@ -114,16 +114,17 @@
 }
 
 // Single event page (events/single.html)
+.content-item__entry,
 .content-item__event {
-  .content-item__title,
-  .content-item__icon {
-    margin: 0;
-    padding: 1rem 0;
-  }
+    .content-item__title,
+    .content-item__icon {
+      margin: 0;
+      padding: 1rem 0;
+    }
 
-  .jf-i {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
+    .jf-i {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
 }
