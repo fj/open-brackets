@@ -1,5 +1,4 @@
 ---
-type:         snippet
 title:        "Finding Out What Changed During Debian/Ubuntu Package Upgrades"
 date:         2015-05-22T08:00:00Z
 published:    true
@@ -10,9 +9,10 @@ comments: true
 subscribers: true
 ---
 
-Like many Linux distributions, Debian comes with a package management and distribution system called _apt_ (Advanced Package Tool). While apt is  a very useful feature of Debian systems, upgrading packages can be a little daunting. Here's what a recent `apt-get upgrade`{:.shell} looked like for me:
+Like many Linux distributions, Debian comes with a package management and distribution system called _apt_ (Advanced Package Tool). While apt is  a very useful feature of Debian systems, upgrading packages can be a little daunting. Here's what a recent <code class="shell">apt-get upgrade</code> looked like for me:
 
-```
+<div class="shell">
+<pre>
 ψ sudo apt-get upgrade
 [sudo] password for jxf:
 Reading package lists... Done
@@ -31,8 +31,9 @@ The following packages will be upgraded:
 15 upgraded, 0 newly installed, 0 to remove and 6 not upgraded.
 Need to get 61.3 MB of archives.
 Do you want to continue? [Y/n]
-```
-{:.shell}
+</pre>
+</div>
+
 
 Notice that a number of important-looking packages changed: [graphics driver middleware](https://01.org/linuxgraphics/community/libdrm), [libc](http://en.wikipedia.org/wiki/C_standard_library), and [the text editor I use to write this blog](https://atom.io/). But it's hard to know whether we should install these changes or not, and what the urgency on them is.
 
@@ -49,17 +50,21 @@ Enter _apt-listchanges_, a wonderful tool by [Sandro Tosi](https://twitter.com/s
 
 For example, if we download a recent Firefox nightly package:
 
-```
+<div class="shell">
+<pre>
 apt-get download firefox
-```
-{:.shell}
+</pre>
+</div>
+
 
 and run `apt-listchanges` on it:
 
-```
+<div class="shell">
+<pre>
 apt-listchanges --which=changelogs firefox
-```
-{:.shell}
+</pre>
+</div>
+
 
 we'll get this output:
 
@@ -96,18 +101,21 @@ It would be nice if we could get this list whenever we installed a package. Fort
 
 First we'll install the package:
 
-```
+<div class="shell">
+<pre>
 sudo apt-get install apt-listchanges
-```
-{:.shell}
+</pre>
+</div>
 
-After installation, there's a configuration step which asks you how you'd like to view the changes and make some other choices; I find the `pager` mode is most convenient for viewing. If you want to revisit your configuration choices, you can run `dpkg-reconfigure apt-listchanges`{:.shell}.
+
+After installation, there's a configuration step which asks you how you'd like to view the changes and make some other choices; I find the `pager` mode is most convenient for viewing. If you want to revisit your configuration choices, you can run <code class="shell">dpkg-reconfigure apt-listchanges</code>
 
 After the configuration is done your preferences will be saved in `/etc/apt/listchanges.conf`.
 
 Now that we've got that, let's install a package!
 
-```
+<div class="shell">
+<pre>
 sudo apt-get install firefox
 [...]
 Do you want to continue? [Y/n]
@@ -121,8 +129,8 @@ firefox (40.0~a2~hg20150520r262219-0ubuntu1~umd1~trusty) trusty; urgency=medium
 
  -- Chris Coulson <chris.coulson@canonical.com>  Wed, 20 May 2015 17:17:16 +0100
 apt-listchanges: Do you want to continue? [Y/n] y
-```
-{:.shell}
+</pre>
+</div>
 
 Notice the second prompt for apt-listchanges; this is one of the configuration settings you can choose. Here, you'll get a chance to review what changed before you decide to pull the trigger.
 

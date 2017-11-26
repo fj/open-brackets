@@ -1,5 +1,4 @@
 ---
-type:         post
 title:        "In the Beginning"
 date:         2015-04-01T08:00:00Z
 published:    true

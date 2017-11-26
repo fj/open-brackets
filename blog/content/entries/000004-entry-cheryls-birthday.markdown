@@ -1,15 +1,16 @@
 ---
-type:         post
 title:        "Solving the \"Cheryl's Birthday\" Problem with Prolog"
 date:         2015-04-17T08:00:00Z
 published:    true
+description:  "Using the Cheryl's Birthday problem to explore Prolog."
+comments:     true
+subscribers:  true
+markup:       mmark
+slug:         "cheryls-birthday"
 tags:
-  - prolog
-  - experiments
-  - software
-description: "Using the Cheryl's Birthday problem to explore Prolog."
-comments: true
-subscribers: true
+- prolog
+- experiments
+- software
 ---
 
 The "Cheryl's Birthday" problem has attracted a lot of press, with [CNN](http://www.cnn.com/2015/04/15/living/feat-cheryl-birthday-math-problem-goes-viral/), the [Washington Post](http://www.washingtonpost.com/news/morning-mix/wp/2015/04/14/when-is-cheryls-birthday-the-math-problem-that-stumped-the-internet/), [Slate](http://www.slate.com/articles/video/video/2015/04/cheryl_s_birthday_answer_singapore_logic_math_problem_solved_video.html), and the [Telegraph](http://www.telegraph.co.uk/education/educationnews/11534378/When-is-Cheryls-birthday-The-tricky-math-problem-that-has-everyone-stumped.html) and [countless others](https://twitter.com/search?q=%23cherylsbirthday) weighing in.
@@ -47,8 +48,9 @@ Enter [Prolog](http://en.wikipedia.org/wiki/Prolog)! It's pretty rare that I eve
 
 # Prolog
 
-Prolog {% margin %}If you want to install Prolog yourself and follow along, follow the directions <a href="http://www.swi-prolog.org/build/">here</a>. You can load Prolog programs with <code class="shell">prolog -e x.pl</code>.{% endmargin %}
-belongs to a relatively rare breed of _logic programming languages_, in contrast to _imperative_ programming languages. Broadly, imperative languages require that your program take the form of a series of explicit instructions that describe what to do. For example, an imperative program to find the smallest element in a list might take a form like this:
+If you want to install Prolog yourself and follow along, follow the directions <a href="http://www.swi-prolog.org/build/">here</a>. You can load Prolog programs with <code class="shell">prolog -e x.pl</code>.
+
+Prolog belongs to a relatively rare breed of _logic programming languages_, in contrast to _imperative_ programming languages. Broadly, imperative languages require that your program take the form of a series of explicit instructions that describe what to do. For example, an imperative program to find the smallest element in a list might take a form like this:
 
 ```
 smallest(list):
@@ -69,8 +71,9 @@ smallest(list):
 
 This is an interesting inversion of responsibilities relative to imperative programs: instead of _telling a computer what to do_, we say _what the answer has to look like_. Then the computer is free to decide how to arrive at the answer.
 
+<code>;</code> is disjunction in Prolog, similar to the <code>or</code> keyword elsewhere; <code>,</code> is conjunction, like <code>and</code>.
+
 All Prolog programs adopt this approach. We describe a series of true statements, then ask Prolog to evaluate a question to see if there is an answer that is consistent with everything we described. Those statements can take the form of either _facts_ or _rules_.
-{% margin %}<code>;</code> is disjunction in Prolog, similar to the <code>or</code> keyword elsewhere; <code>,</code> is conjunction, like <code>and</code>.{% endmargin %}
 
 * Facts are true statements in the universe of the program, like "grass is green", "Bob is a person", or "Alice is Bob's sister". In Prolog, we might express these as `green(grass)`, `person(bob)`, and `sibling(alice, bob)`, respectively.
 
@@ -93,6 +96,7 @@ candidate_birthday('May', 19).
 /* ... */
 candidate_birthday('August', 17).
 ```
+
 
 If we wanted to cut down on the repetition, we can also write this as a _rule_ instead of a series of facts. The rule is that a month and a day are a candidate birthday if they belong to the set of candidate birthdays:
 
@@ -164,7 +168,8 @@ s1(Month, Day):-
 
 This leaves us with five possible answers -- the dates in July and August. We can ask Prolog to verify this for us at the console:
 
-```
+<div class="shell">
+<pre>
 $ prolog -e cheryl.pl
 
 ?- s1(Month, Day).
@@ -178,8 +183,8 @@ Month = 'August',
 Day = 15 ;
 Month = 'August',
 Day = 17.
-```
-{:.shell}
+</pre>
+</div>
 
 ## Second statement: Bernard was stumped, but now he isn't
 
@@ -195,7 +200,8 @@ s2(Month, Day):-
 
 This rule returns true if the month and day of a given birthday are in the candidate list and if they uniquely determine the month after taking into account the first statement. Only three possible dates remain at this point: July 16, August 15, and August 17 -- the remaining dates which uniquely determine their month. We can verify this at the console:
 
-```
+<div class="shell">
+<pre>
 $ prolog -e cheryl.pl
 
 ?- s2(Month, Day).
@@ -205,8 +211,8 @@ Month = 'August',
 Day = 15 ;
 Month = 'August',
 Day = 17.
-```
-{:.shell}
+</pre>
+</div>
 
 ## Third statement: Albert's got it too
 
@@ -222,12 +228,14 @@ This rule returns true if the month and day of a given birthday are in the candi
 
 Albert can't be holding August, therefore, because that wouldn't uniquely determine the day -- it could be either August 15 or August 17. So he must be holding July, which in turn means that Cheryl's birthday must be July 16. And, indeed, that's what we get:
 
-```
+<div class="shell">
+<pre>
 ?- s3(Month, Day).
 Month = 'July',
 Day = 16 .
-```
-{:.shell}
+</pre>
+</div>
+
 
 Fantastic! Logic programming isn't suitable for everything, but it unquestionably shines at solving constraint-based problems like this one.
 

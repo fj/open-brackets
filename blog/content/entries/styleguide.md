@@ -1,17 +1,17 @@
 ---
-title: Post Styleguide
-date: 2017-01-14T08:30:00Z
-comments: true
+title:       Post Styleguide
+date:        2017-01-14T08:30:00Z
+comments:    true
 subscribers: true
-draft: true
-url: /styleguide
+draft:       true
+url:         /styleguide
 description: Lorem ipsum dolor sit amet, per ei iusto fastidii. Te fierent adipiscing mel, duo ei fabellas reprehendunt.
-keywords: test, draft, styleguide
+keywords:    test, draft, styleguide
+markup:      mmark
 tags:
   - thoughts
   - experiment
   - js
-markup: mmark
 ---
 
 # h1, Header
@@ -71,7 +71,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 ### Tables
 
-| property | <span>San Francisco, CA</span>{:.muted--3x} | <span>New York, NY</span>{:.muted--3x} | <span>Washington, DC</span>{:.muted--3x} | Charlottesville, VA |
+{class="rotated-text full-width small"}
+| property | <span>San Francisco, CA</span> | <span>New York, NY</span> | <span>Washington, DC</span> | Charlottesville, VA |
 | ---- |:----:|:----:|:----:|:----:|
 | annual total precipitation (in) | 20.7 | 49.9 | 39.7 | 46.7 |
 | annual snowfall (in) |  < 1 | 25.1 | 14.5 | 16.3 |
@@ -82,4 +83,3 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 | mean August temperature (°F) | 68 | 80 | 87 | 77 |
 | annual days above 85°F highs | 3 | 15 | 37 | 42 |
 | annual days below 30°F lows | 0 | 78 | 84 | 113 |
-{:.rotated-text.full-width.small}
