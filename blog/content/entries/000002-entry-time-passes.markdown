@@ -10,6 +10,7 @@ tags:
 description: "How much time do we have left?"
 comments: true
 subscribers: true
+slug: "time-passes"
 ---
 
 Every once in a while, I'll think about a somewhat morbid and yet universal question: how long do I have left to live? While no one knows for sure when their time will eventually run out, everyone confronts the reality of their ultimate fate [sooner or later](http://www.theonion.com/articles/world-death-rate-holding-steady-at-100-percent,1670/), willingly or not.

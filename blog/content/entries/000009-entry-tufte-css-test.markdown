@@ -2,13 +2,14 @@
 type:         post
 title:        "Tufte-CSS Test"
 date:         2016-03-14T10:00:00Z
-published:    true
+draft:        true
 tags:
   - pivotal
   - work
 description: "Tufte-CSS Test"
 comments: true
 subscribers: true
+slug: "tufte-css-test"
 ---
 
 Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte’s books and handouts. Tufte’s style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.

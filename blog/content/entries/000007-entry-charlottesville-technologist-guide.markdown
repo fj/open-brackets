@@ -9,6 +9,7 @@ tags:
 description: "A guide to Charlottesville for prospective technologist citizens."
 comments: true
 subscribers: true
+slug: "charlottesville-technologist-guide"
 ---
 
 I frequently get questions from my other technologist friends in SF, Boulder, NY, and elsewhere about what it's like in Charlottesville. I've lived here for a little over a decade now, and while New York will always be my home, Charlottesville has many things to recommend it.

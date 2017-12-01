@@ -9,6 +9,7 @@ tags:
 description: "I'm joining a field engineering team at Pivotal."
 comments: true
 subscribers: true
+slug: "pivotal"
 ---
 
 I like to think of myself as a relatively curious person, and as a professional who builds software, that often has a lot of benefits. But one big downside is that I have a lot of itches to scratch, and I've never been able to satisfy them by doing just one thing. I love what our team has built at [UpHex](http://uphex.com) and the work we're doing to make analytics monitoring easy for businesses everywhere. I wanted to continue using that expertise in a way that was bigger than any one company, but I wasn't sure how to do it.

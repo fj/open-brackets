@@ -9,6 +9,7 @@ tags:
 description: "Exploring the nature of infinity. What does infinity mean?"
 comments: true
 subscribers: true
+slug: "the-infinity-zoo"
 ---
 
 > <div style="white-space: pre">To see a world in a grain of sand,

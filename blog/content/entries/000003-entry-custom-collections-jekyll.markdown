@@ -8,6 +8,7 @@ tags:
 description: "Making custom collections with Jekyll."
 comments: true
 subscribers: true
+slug: "custom-collections-jekyll"
 ---
 
 [Jekyll](https://github.com/jekyll/jekyll) is a popular static site generator written in Ruby and in wide use. A major selling point for Jekyll adoption is that it provides some excellent defaults out of the box, heavily geared towards the assumption that you're writing a blog. It does this largely by taking a convention-over-configuration approach; the defaults are designed to be sensible choices for the majority of its users. However, like many convention-over-configuration systems, it can be tough to make it behave the way you want as soon as you step outside of the prescribed boundaries.
