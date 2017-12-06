@@ -1,8 +1,8 @@
 ---
-title:  smart home deployment platform
-client: University of Virginia / National Science Foundation
-image: portfolio-piloteur.jpg
-date_range: "2013 - 2014"
+title:        "smart home deployment platform"
+client:       "University of Virginia / National Science Foundation"
+image:        portfolio-piloteur.jpg
+date_range:   "2013 - 2014"
 tags:
   - smart homes
   - hardware

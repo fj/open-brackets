@@ -1,8 +1,8 @@
 ---
-title:  VisionMaster FT ECDIS-E
-client: Northrop Grumman
-image: portfolio-northrop-grumman-ecdis.jpg
-date_range: "2006 - 2007"
+title:        "VisionMaster FT ECDIS-E"
+client:       "Northrop Grumman"
+image:        portfolio-northrop-grumman-ecdis.jpg
+date_range:   "2006 - 2007"
 tags:
   - navigation
   - geospatial

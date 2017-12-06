@@ -3,13 +3,13 @@ type:         post
 title:        "The Infinity Zoo: What is Infinity?"
 date:         2015-04-24T08:00:00Z
 published:    true
+description:  "Exploring the nature of infinity. What does infinity mean?"
+comments:     true
+subscribers:  true
+slug:         "the-infinity-zoo"
 tags:
   - math
   - numbers
-description: "Exploring the nature of infinity. What does infinity mean?"
-comments: true
-subscribers: true
-slug: "the-infinity-zoo"
 ---
 
 > <div style="white-space: pre">To see a world in a grain of sand,

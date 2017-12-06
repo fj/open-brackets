@@ -1,8 +1,8 @@
 ---
-title:  Asterisk PBX telephony architecture
-client: University of Virginia
-image: portfolio-uva.jpg
-date_range: "2006"
+title:        "Asterisk PBX telephony architecture"
+client:       "University of Virginia"
+image:        portfolio-uva.jpg
+date_range:   "2006"
 tags:
   - telephony
   - hardware

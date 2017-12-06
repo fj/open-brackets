@@ -2,12 +2,12 @@
 title:        "Finding Out What Changed During Debian/Ubuntu Package Upgrades"
 date:         2015-05-22T08:00:00Z
 published:    true
+description:  "How do we see what's changed in an apt package before we install it?"
+comments:     true
+subscribers:  true
+slug:         "better-apt-ubuntu"
 tags:
   - package-management
-description: "How do we see what's changed in an apt package before we install it?"
-comments: true
-subscribers: true
-slug: "better-apt-ubuntu"
 ---
 
 Like many Linux distributions, Debian comes with a package management and distribution system called _apt_ (Advanced Package Tool). While apt is  a very useful feature of Debian systems, upgrading packages can be a little daunting. Here's what a recent <code class="shell">apt-get upgrade</code> looked like for me:

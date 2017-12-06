@@ -1,8 +1,8 @@
 ---
-title:  National Emissions Inventory System
-client: United States Environmental Protection Agency
-image: portfolio-eis.jpg
-date_range: "2007 - 2009"
+title:        "National Emissions Inventory System"
+client:       "United States Environmental Protection Agency"
+image:        portfolio-eis.jpg
+date_range:   "2007 - 2009"
 tags:
   - environment
   - java

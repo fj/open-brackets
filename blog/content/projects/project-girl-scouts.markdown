@@ -1,8 +1,8 @@
 ---
-title:  cookie flavor profile analysis
-client: Girl Scouts of America / Little Brownie Bakers
-image: portfolio-girl-scouts.jpg
-date_range: "2006 - 2007"
+title:        "cookie flavor profile analysis"
+client:       "Girl Scouts of America / Little Brownie Bakers"
+image:        portfolio-girl-scouts.jpg
+date_range:   "2006 - 2007"
 tags:
   - food
   - statistics

@@ -1,8 +1,8 @@
 ---
-title:  hotel booking API design, development, and scaling
-client: Getaroom.com / Hilton Hotels and Resorts
-image: portfolio-getaroom.jpg
-date_range: "2010"
+title:        "hotel booking API design, development, and scaling"
+client:       "Getaroom.com / Hilton Hotels and Resorts"
+image:         portfolio-getaroom.jpg
+date_range:   "2010"
 tags:
   - travel
   - api

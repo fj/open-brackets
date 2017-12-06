@@ -1,8 +1,8 @@
 ---
-title:  Stellant CT injection system
-client: Bayer HealthCare
-image: portfolio-stellant.png
-date_range: "2009"
+title:        "Stellant CT injection system"
+client:       "Bayer HealthCare"
+image:        portfolio-stellant.png
+date_range:   "2009"
 tags:
   - health
   - hardware

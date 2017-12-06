@@ -8,9 +8,9 @@ subscribers:  true
 markup:       mmark
 slug:         "cheryls-birthday"
 tags:
-- prolog
-- experiments
-- software
+  - prolog
+  - experiments
+  - software
 ---
 
 The "Cheryl's Birthday" problem has attracted a lot of press, with [CNN](http://www.cnn.com/2015/04/15/living/feat-cheryl-birthday-math-problem-goes-viral/), the [Washington Post](http://www.washingtonpost.com/news/morning-mix/wp/2015/04/14/when-is-cheryls-birthday-the-math-problem-that-stumped-the-internet/), [Slate](http://www.slate.com/articles/video/video/2015/04/cheryl_s_birthday_answer_singapore_logic_math_problem_solved_video.html), and the [Telegraph](http://www.telegraph.co.uk/education/educationnews/11534378/When-is-Cheryls-birthday-The-tricky-math-problem-that-has-everyone-stumped.html) and [countless others](https://twitter.com/search?q=%23cherylsbirthday) weighing in.

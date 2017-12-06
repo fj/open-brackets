@@ -2,12 +2,12 @@
 title:        "In the Beginning"
 date:         2015-04-01T08:00:00Z
 published:    true
+description:  "In which I publish my first post, after much gnashing of teeth."
+comments:     true
+subscribers:  true
+slug:         "in-the-beginning"
 tags:
   - meta
-description: "In which I publish my first post, after much gnashing of teeth."
-comments: true
-subscribers: true
-slug: "in-the-beginning"
 ---
 
 It's probably unusual to start the first post for a blog by talking about one's past failures, and yet few things seem more appropriate right now.

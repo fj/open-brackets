@@ -1,8 +1,8 @@
 ---
-title:  predictive, proactive alerting SaaS
-client: UpHex
-image: portfolio-uphex.png
-date_range: "2013 - &#x22ef;"
+title:        "predictive, proactive alerting SaaS"
+client:       "UpHex"
+image:        portfolio-uphex.png
+date_range:   "2013 - &#x22ef;"
 tags:
   - statistics
   - ruby
