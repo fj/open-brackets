@@ -1,0 +1,23 @@
+---
+title:       Event Template Styleguide
+type:        events
+layout:      single
+name: "Hack.UVA"
+event_type: other
+duration:
+event:
+  date_range: 2015-02-28⋯03-01
+  name: hack.UVA
+  url: http://hackuva.io
+location:
+  poi_name: Newcomb Hall
+  poi_url: http://www.virginia.edu/newcomb/
+  geo_name: Charlottesville, Virginia, US
+  geo_url: https://goo.gl/maps/mhJcJHMEaP72
+content:
+  slides:
+  video:
+description: UVA's second annual hackathon.
+---
+
+I'll be judging the [Hack.UVA](http://hackuva.io/) hackathon. It's a two-day event taking place on February 28th and open to all current [University of Virginia](http://www.virginia.edu) students. If you're a student, you can register [here](http://goo.gl/IwhBJU)!

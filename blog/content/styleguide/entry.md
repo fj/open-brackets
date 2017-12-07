@@ -1,10 +1,11 @@
 ---
-title:       Post Styleguide
+title:       Post Styleguideee
 date:        2017-01-14T08:30:00Z
 comments:    true
 subscribers: true
 draft:       true
-url:         /styleguide
+type:        entries
+layout:      single
 description: Lorem ipsum dolor sit amet, per ei iusto fastidii. Te fierent adipiscing mel, duo ei fabellas reprehendunt.
 keywords:    test, draft, styleguide
 markup:      mmark
