@@ -1,8 +1,8 @@
 ---
-title:  technical / product leadership; $5M fundraise
-client: Cardagin Networks
-image: portfolio-cardagin.jpg
-date_range: "2011 - 2012"
+title:        "technical / product leadership; $5M fundraise"
+client:       "Cardagin Networks"
+image:        portfolio-cardagin.jpg
+date_range:   "2011 - 2012"
 tags:
   - b2c
   - ruby
