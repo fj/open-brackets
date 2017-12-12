@@ -1,0 +1,21 @@
+<div class="content-item__meta">
+  <h3 class="content-item__icon">
+    {{ partial "event-icon.html" . }}
+  </h3>
+
+  <time class="content-item__date pd1 muted--2x" datetime="{{ .Params.event.date_range }}" title="{{ .Params.event.date_range }}">{{ .Params.event.date_range }}</time>
+
+  <div class="content-item__links">
+    {{ if .Params.event.url }}
+      <a href="{{ .Params.event.url }}" class="dotted-link caps"><i class="jf-i jf-i-link"></i> Event link</a><br />
+    {{ end }}
+
+    {{ if .Params.content.slides }}
+      <a href="{{ .Params.content.slides }}" class="dotted-link caps"><i class="jf-i jf-i-file"></i> Talk slides</a><br />
+    {{ end }}
+
+    {{ if .Params.content.video }}
+      <a href="{{ .Params.content.video }}" class="dotted-link caps"><i class="jf-i jf-i-video-camera"></i> Talk video</a><br />
+    {{ end }}
+  </div>
+</div>

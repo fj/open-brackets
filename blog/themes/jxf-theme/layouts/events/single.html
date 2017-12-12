@@ -1,16 +1,34 @@
 {{ define "content" }}
   <div class="container--lg content-item__event">
     <div class="content-item__row">
-      {{ partial "entry-meta.html" . }}
+      {{ partial "event-meta.html" . }}
 
       <div class="content-item__body">
         <h3 class="content-item__title">
-          {{ if .Title }}
-            {{ .Title }}
+          {{ if .Params.event.url }}
+            <a href="{{ .Params.event.url }}">
+              {{ partial "event-name.html" . }}
+            </a>
           {{ else }}
-            {{ .Params.name }}
+            {{ partial "event-name.html" . }}
           {{ end }}
         </h3>
+
+        {{ if .Params.location.poi_name | or .Params.location.geo_name }}
+          <div class="content-item__subtitle muted--2x small">
+            {{ if .Params.location.poi_url }}
+              <span><a href="{{ .Params.location.poi_url }}">{{ .Params.location.poi_name }}</a></span> ·
+            {{ else if .Params.location.poi_name }}
+              <span>{{ .Params.location.poi_name }}</span> ·
+            {{ end }}
+
+            {{ if .Params.location.geo_url }}
+              <span><a href="{{ .Params.location.geo_url }}">{{ .Params.location.geo_name }}</a></span>
+            {{ else if .Params.location.geo_name }}
+              <span>{{ .Params.location.geo_name }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
 
         <article class="content-item__markdown">
           {{ .Content }}

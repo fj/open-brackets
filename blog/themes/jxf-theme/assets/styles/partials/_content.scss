@@ -2,7 +2,7 @@
 // Content items: single entries, entries in lists, event entries
 //
 
-.content-item {  // ??
+.content-item {
   @media (max-width: 72em) {
     .jf-i {
       display: none;
@@ -13,6 +13,25 @@
 .content-item__title {
   margin-top: $margin*3;
   margin-bottom: $margin*2;
+}
+
+.content-item__subtitle {
+  @extend .muted--2x;
+  @extend .h5;
+
+  font-family: $sans-font-family;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: .75rem;
+  line-height: 1.25rem;
+
+  span {
+    @extend .px1;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
 }
 
 .content-item__row {
@@ -93,7 +112,8 @@
 
 // List of content items (list.html)
 .content-item__list {
-  .h2, .h4 {
+  .h2,
+  .h4 {
     text-align: center;
   }
 
@@ -127,4 +147,33 @@
       top: 0;
       left: 0;
     }
+}
+
+// CSS Grid styling to get items aligned well
+.content-item__event {
+  @supports (display: grid) {
+    .content-item__meta,
+    .content-item__body {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 4rem 4rem auto;
+
+      .content-item__date,
+      .content-item__subtitle {
+        grid-row-start: 2;
+        padding: $padding*1.4 0;
+      }
+
+      .content-item__markdown,
+      .content-item__info {
+        grid-row-start: 3;
+        padding: 0;
+      }
+
+      .content-item__subtitle,
+      .content-item__info {
+        margin: 0;
+      }
+    }
+  }
 }

@@ -1,0 +1,7 @@
+{{ if .Params.event.name }}
+  {{ .Params.event.name }}
+{{ else if .Params.name }}
+  {{ .Params.name }}
+{{ else }}
+  {{ .Title }}
+{{ end }}
