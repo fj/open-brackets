@@ -2,33 +2,34 @@
 title:       Event Template Styleguide
 type:        events
 layout:      single
-name: "Hack.UVA"
+name: "Event Name"
 event_type: other
 duration:
 event:
   date_range: 2015-02-28⋯03-01
-  name: hack.UVA
-  url: http://hackuva.io
+  name: Event Name
+  #url: http://hackuva.io
 location:
-  poi_name: Newcomb Hall
+  poi_name: Event Host Name
   poi_url: http://www.virginia.edu/newcomb/
-  geo_name: Charlottesville, Virginia, US
-  geo_url: https://goo.gl/maps/mhJcJHMEaP72
+  geo_name: Event Location
+  #geo_url: https://goo.gl/maps/mhJcJHMEaP72
 content:
   slides: "#"
   video: "#"
-description: UVA's second annual hackathon.
+description: Event description
 ---
 
-I'll be judging the [Hack.UVA](http://hackuva.io/) hackathon. It's a two-day event taking place on February 28th and open to all current [University of Virginia](http://www.virginia.edu) students. If you're a student, you can register [here](http://goo.gl/IwhBJU)!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 ### Summary
 
-In this talk, I'd like to discuss three points:
+Arcu cursus euismod quis viverra nibh cras. Viverra mauris in aliquam sem fringilla ut morbi.
 
-* the _right to repair_, an intellectual-property right which says if you own something, you should be allowed and able to repair it, and why that's a good thing
 
-* how the increasing complexity of cars and heavy-handedness of manufacturers is making it harder for ordinary people to repair things they own
+* Tellus integer feugiat scelerisque __varius morbi__ enim nunc.
 
-* how OBD-2, a diagnostic protocol originally intended to make it easier for people to diagnose what's happening with their cars, has effectively become a form of DRM in car software
+* Tortor dignissim *convallis* aenean et tortor at. Odio ut sem nulla pharetra diam sit amet.
+
+* Risus ultricies tristique nulla aliquet. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.
