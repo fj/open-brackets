@@ -1,27 +1,21 @@
-<li class="list-item">
-  <a href="{{ .Permalink }}" title="{{ .Title }}">
-    <h3 class="content-item__title">
+<li class="list-item event">
+  {{ partial "event-meta.html" . }}
+
+  <a href="{{ .Permalink }}" title="{{ .Title }}" class="h3 content-title">
       {{ if .Title }}
         {{ .Title}}
       {{ else }}
         {{ .Params.name }}
       {{ end }}
-    </h3>
-
-    <p class="content-item__description">
-      <time class="italic" title="{{ .Date }}">
-        {{ .Params.event.date_range }}
-      </time> &nbsp;
-
-      <br />
-
-      {{ if .Params.description }}
-        {{ .Params.description }}
-      {{ else }}
-        {{ .Summary }}
-      {{ end }}
-
-      <br />
-    </p>
   </a>
+
+  {{ partial "event-subtitle.html" . }}
+
+  <article>
+    {{ if .Summary }}
+      {{ .Summary }}
+    {{ else }}
+      {{ .Params.description }}
+    {{ end }}
+  </article>
 </li>

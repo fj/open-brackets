@@ -1,0 +1,15 @@
+{{ if .Params.location.poi_name | or .Params.location.geo_name }}
+  <div class="content-subtitle muted--2x small">
+    {{ if .Params.location.poi_url }}
+      <span><a href="{{ .Params.location.poi_url }}">{{ .Params.location.poi_name }}</a></span> ·
+    {{ else if .Params.location.poi_name }}
+      <span>{{ .Params.location.poi_name }}</span> ·
+    {{ end }}
+
+    {{ if .Params.location.geo_url }}
+      <span><a href="{{ .Params.location.geo_url }}">{{ .Params.location.geo_name }}</a></span>
+    {{ else if .Params.location.geo_name }}
+      <span>{{ .Params.location.geo_name }}</span>
+    {{ end }}
+  </div>
+{{ end }}

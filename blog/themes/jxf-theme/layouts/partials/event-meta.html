@@ -1,8 +1,6 @@
-<div class="content-item__meta">
-  <h3 class="content-item__icon">
-    {{ partial "event-icon.html" . }}
-  </h3>
+{{ partial "event-icon.html" . }}
 
+<div class="content-sidebar">
   <time class="content-item__date pd1 muted--2x" datetime="{{ .Params.event.date_range }}" title="{{ .Params.event.date_range }}">{{ .Params.event.date_range }}</time>
 
   <div class="content-item__links">

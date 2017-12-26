@@ -1,8 +1,6 @@
 ---
-type:         post
 title:        "Pivotal"
 date:         2015-08-04T10:00:00Z
-published:    true
 description:  "I'm joining a field engineering team at Pivotal."
 comments:     true
 subscribers:  true

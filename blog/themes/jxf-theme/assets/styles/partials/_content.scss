@@ -32,10 +32,6 @@
   display: block;
 }
 
-.content-item__description {
-  margin-top: 1.5rem;
-}
-
 .content-item__taxonomy {
   display: block;
 }
@@ -56,6 +52,7 @@ article {
   }
 
   h2, h3, h4, h5, h6 {
+    text-align: left;
     margin-top: 0;
     margin-bottom: 0.9775rem;
   }
@@ -77,91 +74,80 @@ article {
 
 
 //
-// Page specific overrides
-
-// List of content items (list.html)
-.layout-list {
-  .h2, .h4 {
-    text-align: center;
-  }
-
-  .list-item {
-    margin-bottom: $margin*3;
-    margin-top: $margin*2;
-  }
-}
-
 // Single event page (events/single.html)
 .entry,
 .event {
   @extend .container--lg;
+  margin-top: $margin * 3;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-column-gap: $margin * 2;
+
+    article,
     .content-title,
-    .content-item__icon {
+    .content-subtitle,
+    .content-sidebar {
       margin: 0;
-      padding: 1rem 0;
+      padding: 0;
     }
 
-    .jf-i {
-      position: relative;
-      top: 0;
-      left: 0;
+    & > .jf-i,
+    .content-title,
+    .content-subtitle {
+      align-self: center;
     }
+
+    & > .jf-i,
+    .content-sidebar {
+      text-align: right;
+    }
+  }
 }
 
 // CSS Grid styling to get items aligned well
 .event {
   @supports (display: grid) {
-    .content-item__meta,
-    .content {
-      display: grid;
-      grid-template-columns: 25% 75%;
-      grid-template-rows: 4rem 4rem auto;
+    grid-template-rows: 3rem 3rem auto;
 
-      .content-item__date,
-      .content-item__subtitle {
-        grid-row-start: 2;
-      }
+    .content-item__date {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
 
-      .content-sidebar {
-        grid-row-start: 3;
-      }
+    .content-subtitle {
+      grid-row-start: 2;
+      grid-column-start: 2;
+    }
 
-      .content-item__subtitle,
-      .content-sidebar {
-        margin: 0;
-        padding: 0;
-      }
+    .content-sidebar {
+      grid-row-start: 3;
+    }
+
+    article {
+      grid-column-start: 2;
+      grid-row-start: 3;
     }
   }
 }
 
-.entry {
-  margin-top: $margin*3;
 
+.entry {
   @supports (display: grid) {
-    display: grid;
-    grid-template-columns: 25% 75%;
     grid-template-rows: 4rem auto;
-    grid-column-gap: $margin * 2;
     grid-row-gap: $margin;
 
-    article {
-      padding: 0;
-    }
-
-    .jf-i {
+    & > .jf-i {
       @extend .h3;
       font-family: 'fontawesome';
       grid-row-start: 1;
       grid-column-start: 1;
-      text-align: right;
-      top: 0.3em;
     }
 
     .content-sidebar {
       grid-column-start: 1;
       grid-row-start: 2;
-      text-align: right;
     }
 
     .content-title {

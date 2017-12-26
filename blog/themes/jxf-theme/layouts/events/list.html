@@ -1,15 +1,13 @@
 {{ define "content" }}
-  <div class="container content-item__list">
-    <h1>{{ .Title }}</h1>
+  <h1 class="h2">{{ .Title }}</h1>
 
-    {{ .Content }}
+  {{ .Content }}
 
-    {{ $section := where .Data.Pages.ByDate.Reverse "Section" .Section }}
+  {{ $section := where .Data.Pages.ByDate.Reverse "Section" .Section }}
 
-    <ul class="list">
-      {{ range  $section }}
-        {{ .Render "li" }}
-      {{ end }}
-    </ul>
-  </div>
+  <ul class="list">
+    {{ range  $section }}
+      {{ .Render "li" }}
+    {{ end }}
+  </ul>
 {{ end }}

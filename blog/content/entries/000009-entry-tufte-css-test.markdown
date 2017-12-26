@@ -1,8 +1,6 @@
 ---
-type:         post
 title:        "Tufte-CSS Test"
 date:         2016-03-14T10:00:00Z
-draft:        true
 description:  "Tufte-CSS Test"
 comments:     true
 subscribers:  true
