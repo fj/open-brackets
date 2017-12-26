@@ -32,6 +32,10 @@
 
         <article class="content-item__markdown">
           {{ .Content }}
+
+          {{ if not .Content }}
+            {{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Params.name }}{{ end }}
+          {{ end}}
         </article>
       </div>
     </div>

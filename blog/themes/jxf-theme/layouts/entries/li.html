@@ -1,19 +1,17 @@
-<li class="list-item content-item__row">
+<li class="list-item entry">
   {{ partial "entry-meta.html" . }}
 
-  <div class="content-item__body">
-    <h3 class="content-item__title">
-      <a href="{{ .Permalink }}" title="{{ .Title }}">
-        {{ .Title }}
-      </a>
-    </h3>
+  <a href="{{ .Permalink }}" title="{{ .Title }}" class="content-title h3">
+    {{ .Title }}
+  </a>
 
-    {{ .Summary }}
+  <div class="content">
+    <article>
+      {{ .Summary }}
+    </article>
 
-    <div class="content-item__more">
-      <a href="{{ .Permalink }}" title="Read {{ .Title }}">
-        Read more...
-      </a>
-    </div>
+    <a href="{{ .Permalink }}" class="content-more" title="Read {{ .Title }}">
+      Read more...
+    </a>
   </div>
 </li>

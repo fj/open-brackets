@@ -1,20 +1,46 @@
 .pagination {
   @extend .my2;
-
   width: 75%;
+
+  a {
+    width: 50%;
+    display: block;
+  }
+
+  span {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+  }
 
   .previous {
     float: left;
+    position: relative;
+
+    &:before {
+      content: "\00AB";
+      position: absolute;
+      left: -15px;
+    }
   }
 
   .next {
     float: right;
+    text-align: right;
+    position: relative;
+
+    &:after {
+      content: "\00BB";
+      position: absolute;
+      right: -15px;
+    }
   }
 }
 
 .subscribers {
   @extend .my2;
-
   border: 1px solid gray;
   padding: 1rem;
 }
