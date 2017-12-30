@@ -2,24 +2,15 @@ body {
   counter-reset: sidenote-counter;
 }
 
-input.margin-toggle { 
-  display: none; 
-}
 
-label.sidenote-number { 
-  display: inline; 
-}
 
-label.margin-toggle:not(.sidenote-number) { 
-  display: none; 
-}
 
-.sidenote,
-.marginnote { 
+article > :not(canvas):not(.full-width).sidenote,
+article > :not(canvas):not(.full-width).marginnote {
   float: right;
   clear: right;
-  margin-right: -50%;
-  width: 40%;
+  width: 33%;
+  margin-right: -8%;
   margin-top: 0;
   margin-bottom: 0;
   font-family: $sans-font-family__alt;
@@ -27,13 +18,29 @@ label.margin-toggle:not(.sidenote-number) {
   opacity: 0.75;
   vertical-align: baseline;
   position: relative;
+
+  @media (max-width: 60em) {
+    display: none;
+  }
+
+  @media (max-width: 76em) {
+    width: 28%;
+    margin-right: -2%;
+  }
 }
 
-.sidenote-number { 
-  counter-increment: sidenote-counter; 
+.sidenote-number {
+  counter-increment: sidenote-counter;
+
+  &:after {
+    content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+  }
 }
 
-.sidenote-number:after, .sidenote:before { 
+.sidenote-number:after,
+.sidenote:before {
   content: counter(sidenote-counter) " ";
   position: relative;
   vertical-align: baseline;
@@ -41,51 +48,53 @@ label.margin-toggle:not(.sidenote-number) {
   font-size: 0.88rem;
 }
 
-.sidenote-number:after { 
-  content: counter(sidenote-counter);
-  font-size: 1rem;
-  top: -0.5rem;
-}
-
-.sidenote:before { 
+.sidenote-number,
+.sidenote:before {
   content: counter(sidenote-counter) " ";
-  top: -0.5rem; 
+  top: -0.5rem;
   opacity: 0.75;
 }
 
-@media (max-width: 76em) { 
-  .sidenote,
-  .marginnote { 
-    margin-right: -40%;
-    width: 30%;
+label {
+  &.sidenote-number {
+    display: inline;
+  }
+
+  &.margin-toggle:not(.sidenote-number) {
+    display: none;
+
+    @media (max-width: 60em) {
+      display: inline;
+    }
+  }
+
+  @media (max-width: 60em) {
+    cursor: pointer;
   }
 }
 
-@media (max-width: 60em) { 
-  label.margin-toggle:not(.sidenote-number) { 
-    display: inline; 
-  }
-  .sidenote, .marginnote { 
-    display: none; 
-  }
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote { 
-    display: block;
-    float: left;
-    left: 1rem;
-    clear: both;
-    width: 95%;
-    margin: 1rem 2.5%;
-    vertical-align: baseline;
-    position: relative; 
-  }
-  label { 
-    cursor: pointer; 
-  }
+input.margin-toggle {
+  display: none;
+}
+
+@media (max-width: 60em) {
   .margin-toggle {
     border-bottom: thin #444 dotted;
     color: #3498db;
+
+    &:checked + .sidenote,
+    &:checked + .marginnote {
+      display: block;
+      float: left;
+      left: 1rem;
+      clear: both;
+      width: 95%;
+      margin: 1rem 2.5%;
+      vertical-align: baseline;
+      position: relative;
+    }
   }
+
   .sidenote-number.sidenote-number {
     border-bottom: none;
   }

@@ -87,8 +87,12 @@ article {
 
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 22% 75%;
     grid-column-gap: $margin * 2;
+
+    @media (max-width: 76em) {
+      grid-template-columns: 15% 80%;
+    }
 
     article,
     .content-title,

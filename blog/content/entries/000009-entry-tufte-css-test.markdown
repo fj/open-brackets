@@ -21,15 +21,16 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit.{% sidenote %}This is a
 
 # Margin Notes
 
-If you want a sidenote without footnote-style numberings, then you want a margin note.{% margin %}This is a margin note{% endmargin %} Notice there isn’t a number preceding the note. On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its viewability-toggle is a symbol rather than a reference number. This document currently uses the symbol ⊕ (&#8853;), but it’s up to you.
+If you want a sidenote without footnote-style numberings, then you want a margin note. {{< margin inline="true" >}}This is a margin note{{< /margin >}} Notice there isn’t a number preceding the note. On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its viewability-toggle is a symbol rather than a reference number. This document currently uses the symbol ⊕ (&#8853;), but it’s up to you.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi, aut earum in sapiente a laboriosam impedit cupiditate quos quam laudantium, delectus possimus.{% margin %}This is another margin note{% endmargin %}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi, aut earum in sapiente a laboriosam impedit cupiditate quos quam laudantium, delectus possimus. {{< margin >}}This is another margin note{{< /margin >}}
 
 # Margin Notes With Images and HTML
 
 Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.
 
-{% margin %}
+{{< margin >}}
 <img src="https://edwardtufte.github.io/tufte-css/img/rhino.png" alt="Image of a Rhinoceros"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.
-{% endmargin %}
+{{< /margin >}}
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore facilis ipsa optio modi, voluptate temporibus impedit perferendis vitae recusandae quidem, explicabo laudantium at dolorem beatae illum est fuga voluptatibus quis error dignissimos illo accusamus vel incidunt vero cumque? Ipsum recusandae culpa est ratione nulla voluptatum rerum assumenda deserunt eum perspiciatis!
