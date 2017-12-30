@@ -124,3 +124,9 @@ $$ \frac{123}{999} = \frac{41}{333} $$
 {{< caption >}}
 Image Caption
 {{< /caption >}}
+
+![Image of Cat](http://lorempixel.com/output/cats-q-c-640-480-1.jpg)
+
+{{% caption %}}
+Caption [with link](#)
+{{% /caption %}}

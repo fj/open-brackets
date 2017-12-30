@@ -27,10 +27,11 @@ table {
   }
 }
 
-table.rotated-text {
+.rotated-text {
   tr:first-child {
     border: none;
   }
+
   th {
     height: 6em;
     border: none;
@@ -39,9 +40,12 @@ table.rotated-text {
     transform-origin: left bottom;
     vertical-align: bottom;
     white-space: nowrap;
-  }
-  th:first-child {
-    transform: none;
+    @extend .muted--2x;
+
+    &:first-child {
+      transform: none;
+      opacity: 1;
+    }
   }
 }
 

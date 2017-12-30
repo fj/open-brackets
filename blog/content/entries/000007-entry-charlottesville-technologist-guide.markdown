@@ -45,16 +45,15 @@ Charlottesville is a predominantly liberal city situated in a broader rural regi
 
 ![Blue Ridge Mountains]({{ page.image_asset_path }}/blue-ridge-mountains-fall.jpeg)
 
-{{< caption >}}
-Blue Ridge Mountains in the fall. The scenic [Skyline Drive](http://www.nps.gov/shen/planyourvisit/driving-skyline-drive.htm) winds through the trees.
-{{< /caption >}}
+{{% caption %}}Blue Ridge Mountains in the fall. The scenic [Skyline Drive](http://www.nps.gov/shen/planyourvisit/driving-skyline-drive.htm) winds through the trees.{{% /caption %}}
 
 
 Charlottesville forms a triangle with Washington, DC two hours away to the northeast and Richmond, VA one hour away to the east. Outside the city, the scenery rapidly becomes more rural and less developed, with mountains to the west and forests, farms, and vineyards to the south and east. The Blue Ridge Mountains and skiing at Wintergreen and the surrounding area are thirty minutes by car; Atlantic beaches are three hours.
 
 Weather is very pleasant. There's about 220 days of sunshine per year, so it's much more likely to be sunny than not, and there's usually a light west-to-east wind coming from the mountains.
 
-| property | <span>San Francisco, CA</span>{:.muted--3x} | <span>New York, NY</span>{:.muted--3x} | <span>Washington, DC</span>{:.muted--3x} | Charlottesville, VA |
+{{% table rotated="true" small="true" %}}
+| property | San Francisco, CA | New York, NY | Washington, DC | Charlottesville, VA |
 | ---- |:----:|:----:|:----:|:----:|
 | annual total precipitation (in) | 20.7 | 49.9 | 39.7 | 46.7 |
 | annual snowfall (in) |  < 1 | 25.1 | 14.5 | 16.3 |
@@ -65,7 +64,7 @@ Weather is very pleasant. There's about 220 days of sunshine per year, so it's m
 | mean August temperature (°F) | 68 | 80 | 87 | 77 |
 | annual days above 85°F highs | 3 | 15 | 37 | 42 |
 | annual days below 30°F lows | 0 | 78 | 84 | 113 |
-{:.rotated-text.full-width.small}
+{{% /table %}}
 
 Summers are warm and sometimes on the humid side, albeit milder than Virginia as a whole. Typical summer temperatures are in the [high 70s](http://www.usa.com/charlottesville-va-weather.htm). Very brief summer thunderstorms are common, and then it's quickly back to sunshine again.
 
@@ -77,7 +76,7 @@ Extreme weather is rare. Occasionally Atlantic hurricanes make landfall near Cha
 
 * **Food:** Charlottesville is chock-full of highly-rated excellent restaurants and eateries that place a premium on high-quality local ingredients. Local restaurants run the range from 3 AM burger joints to world-class eateries, and have routinely garnered high praise from national reviewers. A few local venues and their chefs have won awards at the national or international level, including Hamilton's, Peter Chang's China Grill, Ivy Inn, Citizen Burger, Fossett's, and Bodo's Bagels.
 
-  Every Saturday morning is the [City Market](http://www.charlottesville.org/Index.aspx?page=757), a pop-up bazaar that lasts a few hours and frequented by street vendors, farmers, potters, artisans, and so on. It's a great way to sample excellent local food. Charlottesville has a large faction of specialty coffee enthusiasts; [Mudhouse](http://mudhouse.com/), [Java Java](http://javajavacafe.com/), [Grit Cafe](http://gritcoffee.com/), and several other locations all make top-quality brews.
+{{% li invisible="true" %}}Every Saturday morning is the [City Market](http://www.charlottesville.org/Index.aspx?page=757), a pop-up bazaar that lasts a few hours and frequented by street vendors, farmers, potters, artisans, and so on. It's a great way to sample excellent local food. Charlottesville has a large faction of specialty coffee enthusiasts; [Mudhouse](http://mudhouse.com/), [Java Java](http://javajavacafe.com/), [Grit Cafe](http://gritcoffee.com/), and several other locations all make top-quality brews.{{% /li %}}
 
 * **Shopping:** Charlottesville is home to three large shopping districts: Fashion Square Mall, Barracks Road Shopping Center, and the Shops at Stonefield. All have large anchor department-store tenants and chain eateries. Grocery needs are supplied by Whole Foods, Trader Joe's, Harris Teeter, Food Lion, Kroger, and a number of other chains. A Costco will open at the end of 2015 in Stonefield.
 
