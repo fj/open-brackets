@@ -7,6 +7,7 @@ comments:     true
 subscribers:  true
 markup:       mmark
 slug:         "cheryls-birthday"
+icon:         post
 tags:
   - prolog
   - experiments

@@ -5,6 +5,7 @@ description:  "I'm joining a field engineering team at Pivotal."
 comments:     true
 subscribers:  true
 slug:         "pivotal"
+icon:         post
 tags:
   - pivotal
   - work

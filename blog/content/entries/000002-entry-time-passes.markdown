@@ -1,5 +1,4 @@
 ---
-type:         experiment
 title:        "Time Passes"
 date:         2015-04-05T07:00:00Z
 published:    true
@@ -7,6 +6,7 @@ description:  "How much time do we have left?"
 comments:     true
 subscribers:  true
 slug:         "time-passes"
+icon:         experiment
 tags:
   - thoughts
   - experiment

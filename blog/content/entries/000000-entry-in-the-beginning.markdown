@@ -6,6 +6,7 @@ description:  "In which I publish my first post, after much gnashing of teeth."
 comments:     true
 subscribers:  true
 slug:         "in-the-beginning"
+icon:         post
 tags:
   - meta
 ---

@@ -3,7 +3,7 @@ title:       Event Template Styleguide
 type:        events
 layout:      single
 name: "Event Name"
-event_type: other
+icon: other
 duration:
 event:
   date_range: 2015-02-28⋯03-01

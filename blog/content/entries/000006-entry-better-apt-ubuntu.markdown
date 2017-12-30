@@ -6,6 +6,7 @@ description:  "How do we see what's changed in an apt package before we install 
 comments:     true
 subscribers:  true
 slug:         "better-apt-ubuntu"
+icon:         snippet
 tags:
   - package-management
 ---

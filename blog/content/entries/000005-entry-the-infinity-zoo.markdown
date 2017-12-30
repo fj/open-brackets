@@ -1,5 +1,4 @@
 ---
-type:         post
 title:        "The Infinity Zoo: What is Infinity?"
 date:         2015-04-24T08:00:00Z
 published:    true
@@ -7,6 +6,7 @@ description:  "Exploring the nature of infinity. What does infinity mean?"
 comments:     true
 subscribers:  true
 slug:         "the-infinity-zoo"
+icon:         post
 tags:
   - math
   - numbers

@@ -5,6 +5,7 @@ description:  "A guide to Charlottesville for prospective technologist citizens.
 comments:     true
 subscribers:  true
 slug:         "charlottesville-technologist-guide"
+icon:         post
 tags:
   - technologists
   - charlottesville

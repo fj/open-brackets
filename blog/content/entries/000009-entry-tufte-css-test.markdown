@@ -5,6 +5,7 @@ description:  "Tufte-CSS Test"
 comments:     true
 subscribers:  true
 slug:         "tufte-css-test"
+icon:         post
 tags:
   - pivotal
   - work

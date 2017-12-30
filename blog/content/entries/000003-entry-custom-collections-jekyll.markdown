@@ -1,5 +1,4 @@
 ---
-type:         post
 title:        "Fully-Featured Custom Collections in Jekyll"
 date:         2015-04-10T07:00:00Z
 published:    true
@@ -7,6 +6,7 @@ description:  "Making custom collections with Jekyll."
 comments:     true
 subscribers:  true
 slug:         "custom-collections-jekyll"
+icon:         post
 tags:
   - jekyll
 ---
