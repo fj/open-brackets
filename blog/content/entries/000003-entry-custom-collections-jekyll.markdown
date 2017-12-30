@@ -77,11 +77,9 @@ But for pages, the sort key is the filename, so `january-2.html` is sorted after
 
 The way this behavior is implemented isn't very convenient, however. Jekyll recommends using the [`sort` filter](http://jekyllrb.com/docs/templates/) in your Liquid templates. If you want pages to be sorted by, say, their `foo` property, you can do:
 
-{%raw%}
 ~~~liquid
 {% for p in site.pages | sort: 'foo' %}
 ~~~
-{%endraw%}
 
 This requires you to make sure you have a `foo` property in your YAML front matter for each page, which can be tedious. If you forget to add this for even a single post, there won't be any hints or warnings -- your site's ordering will just silently break.
 

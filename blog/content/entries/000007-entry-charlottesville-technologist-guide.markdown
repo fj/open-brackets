@@ -21,8 +21,7 @@ It's difficult to describe the advantages and disadvantages of Charlottesville s
 
 ![serpentine walls at the University of Virginia]({{ page.image_asset_path }}/charlottesville-serpentine.jpeg)
 
-Serpentine walls at the University of Virginia. [Source.](https://en.wikipedia.org/wiki/University_of_Virginia#/media/File:Serpentine_wall_UVa_daffodils_2010.jpg)
-{:.caption}
+{{< caption >}}Serpentine walls at the University of Virginia. [Source.](https://en.wikipedia.org/wiki/University_of_Virginia#/media/File:Serpentine_wall_UVa_daffodils_2010.jpg){{< /caption >}}
 
 Charlottesville was founded in 1762 to serve as the seat of Albemarle County and named after Queen Charlotte, the wife of [King George III](https://en.wikipedia.org/wiki/George_III_of_the_United_Kingdom), the monarch whose various taxes and slights against colonial Americans eventually provoked the [Revolutionary War](https://en.wikipedia.org/wiki/American_Revolutionary_War). It sat along a major highway, [Three Notch'd Road](http://en.wikipedia.org/wiki/Three_Notch%27d_Road), that led from the state capitol of Richmond to the Great Appalachian Valley; today, the cross-country Interstate 64 highway follows in its footsteps.
 
@@ -46,8 +45,10 @@ Charlottesville is a predominantly liberal city situated in a broader rural regi
 
 ![Blue Ridge Mountains]({{ page.image_asset_path }}/blue-ridge-mountains-fall.jpeg)
 
+{{< caption >}}
 Blue Ridge Mountains in the fall. The scenic [Skyline Drive](http://www.nps.gov/shen/planyourvisit/driving-skyline-drive.htm) winds through the trees.
-{:.caption}
+{{< /caption >}}
+
 
 Charlottesville forms a triangle with Washington, DC two hours away to the northeast and Richmond, VA one hour away to the east. Outside the city, the scenery rapidly becomes more rural and less developed, with mountains to the west and forests, farms, and vineyards to the south and east. The Blue Ridge Mountains and skiing at Wintergreen and the surrounding area are thirty minutes by car; Atlantic beaches are three hours.
 
@@ -104,8 +105,9 @@ Perhaps the most important reference point for prospective technological citizen
 
 ![Downtown Mall]({{ page.image_asset_path }}/charlottesville-downtown-mall.jpeg)
 
+{{< caption >}}
 Charlottesville's Downtown Mall on a quiet winter evening.
-{:.caption}
+{{< /caption >}}
 
 Charlottesville has an extremely competitive cost of living compared to a number of major cities. This is especially true when measured against the nearest metropolitan counterpart, the Northern Virginia pan-urban area, but holds up for several different metrics.
 
@@ -261,8 +263,9 @@ Charlottesville residents enjoy some of the best commutes in the country; the me
 
 ![map of major roads in Charlottesville]({{ page.image_asset_path }}/charlottesville-major-roads-map.png)
 
+{{< caption >}}
 Routes in blue include Charlottesville's highest-volume roads.
-{:.caption}
+{{< /caption >}}
 
 The major arteries through and around the city are West Main Street, Route 250, Interstate 64, and Route 29. Traffic in Charlottesville is light on average, but most problematic on these arteries. If you live and work somewhere in the boundaries of the City, you can expect your commute to be 15 minutes or less on a typical day if you drive, or under 40 minutes if you walk and use public transport. Rush hours are brief but intense, usually dissipating in under an hour.
 

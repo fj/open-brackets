@@ -1,3 +1,5 @@
-{{ with .Get "inline" }}</p>{{ end }}<div class="marginnote">
-  {{ .Inner }}
-</div>{{ with .Get "inline" }}<p>{{ end }}
+{{ if .Get "inline" }}<span class="marginnote">{{ .Inner }}</span>{{ else }}
+  <div class="marginnote">
+    {{ .Inner }}
+  </div>
+{{ end }}

@@ -72,7 +72,7 @@ smallest(list):
 
 This is an interesting inversion of responsibilities relative to imperative programs: instead of _telling a computer what to do_, we say _what the answer has to look like_. Then the computer is free to decide how to arrive at the answer.
 
-<code>;</code> is disjunction in Prolog, similar to the <code>or</code> keyword elsewhere; <code>,</code> is conjunction, like <code>and</code>.
+{{< margin >}}<code>;</code> is disjunction in Prolog, similar to the <code>or</code> keyword elsewhere; <code>,</code> is conjunction, like <code>and</code>.{{< /margin >}}
 
 All Prolog programs adopt this approach. We describe a series of true statements, then ask Prolog to evaluate a question to see if there is an answer that is consistent with everything we described. Those statements can take the form of either _facts_ or _rules_.
 

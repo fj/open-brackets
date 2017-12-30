@@ -41,9 +41,10 @@
 article {
   @extend .py2;
 
-  p, ul, ol {
+  p, ul, ol, blockquote {
     margin-bottom: 0.9775rem;
     margin-top: 0;
+    font-size: 1.2rem;
   }
 
   h1 {

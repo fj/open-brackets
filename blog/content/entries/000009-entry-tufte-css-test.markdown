@@ -25,6 +25,10 @@ If you want a sidenote without footnote-style numberings, then you want a margin
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi, aut earum in sapiente a laboriosam impedit cupiditate quos quam laudantium, delectus possimus. {{< margin >}}This is another margin note{{< /margin >}}
 
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas id cursus magna, ut aliquam orci. Aliquam erat volutpat. Donec vehicula erat sit amet sagittis lacinia. Ut at malesuada ligula, sed aliquam ex. Vivamus sit amet urna convallis, aliquet mauris non, bibendum enim. Pellentesque at ultrices ipsum. Quisque fermentum urna sodales interdum ultricies.{{< margin inline="true" >}}This is an inline margin note, so you can use it in the middle of a paragraph without breaking the block{{< /margin >}} Nullam in neque ut lorem posuere placerat. Integer at dui ligula. Duis posuere eros ut felis facilisis, scelerisque luctus felis vehicula. In eget elit pharetra purus laoreet efficitur. Praesent porta arcu eget vehicula volutpat. Praesent iaculis, elit a eleifend ultricies, augue turpis viverra sapien, at rhoncus neque massa non erat. Maecenas eleifend consectetur dui, eget cursus massa suscipit in.
+
+Cras quis nulla quis nisi porttitor rhoncus vel in justo. Cras quis lacus nisl. Nulla facilisi. Mauris nec libero elit. Curabitur et elementum tellus. {{% margin inline="true" %}}This is an inline  **margin note** with _markdown_{{% /margin %}}Suspendisse vitae nunc eu mi dapibus maximus nec eu urna. Nam sit amet tortor vel dui sollicitudin facilisis. Donec tristique sollicitudin nulla, vel hendrerit nisl gravida ac. Donec mollis ullamcorper euismod.
+
 # Margin Notes With Images and HTML
 
 Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.
@@ -32,5 +36,7 @@ Tufte emphasizes tight integration of graphics with text. Data, graphs, and figu
 {{< margin >}}
 <img src="https://edwardtufte.github.io/tufte-css/img/rhino.png" alt="Image of a Rhinoceros"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.
 {{< /margin >}}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore facilis ipsa optio modi, voluptate temporibus impedit perferendis vitae recusandae quidem, explicabo laudantium at dolorem beatae illum est fuga voluptatibus quis error dignissimos illo accusamus vel incidunt vero cumque? Ipsum recusandae culpa est ratione nulla voluptatum rerum assumenda deserunt eum perspiciatis!
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore facilis ipsa optio modi, voluptate temporibus impedit perferendis vitae recusandae quidem, explicabo laudantium at dolorem beatae illum est fuga voluptatibus quis error dignissimos illo accusamus vel incidunt vero cumque? Ipsum recusandae culpa est ratione nulla voluptatum rerum assumenda deserunt eum perspiciatis!

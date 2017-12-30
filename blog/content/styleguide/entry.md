@@ -34,6 +34,10 @@ tags:
 
 ### Paragraph
 
+{{< margin >}}
+This is an aside in the margin
+{{< /margin >}}
+
 This website was made with love by [**John Feminella**](https://twitter.com/jxxf). Extensive and thoughtful work and advice was also contributed by the redoubtable [**John Otander**](https://twitter.com/4lpine). Each bit was artisanally regurgitated onto the screen for your express delight.
 
 
@@ -111,3 +115,12 @@ $$ .\overline{123} $$
 $$ \frac{123}{999} $$
 $$ \frac{123}{999} = \frac{41}{333} $$
 ```
+
+
+### Images
+
+![Image of Cat](http://lorempixel.com/output/cats-q-c-640-480-1.jpg)
+
+{{< caption >}}
+Image Caption
+{{< /caption >}}

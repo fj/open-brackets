@@ -4,7 +4,8 @@ body {
 
 
 
-
+.marginnote,
+.sidenote,
 article > :not(canvas):not(.full-width).sidenote,
 article > :not(canvas):not(.full-width).marginnote {
   float: right;
@@ -26,6 +27,23 @@ article > :not(canvas):not(.full-width).marginnote {
   @media (max-width: 76em) {
     width: 28%;
     margin-right: -2%;
+  }
+
+  .MathJax_SVG_Display {
+    display: inline-block !important;
+    width: auto;
+  }
+
+  p {
+    font-size: 0.88rem;
+  }
+}
+
+span.marginnote {
+  margin-right: -39%;
+
+  @media (max-width: 76em) {
+    margin-right: -39%;
   }
 }
 
