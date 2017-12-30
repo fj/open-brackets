@@ -1,4 +1,4 @@
-{{ partial "event-icon.html" . }}
+{{ partial "icon.html"  (dict "icon" .Params.icon) . }}
 
 <div class="content-sidebar">
   <time class="content-item__date pd1 muted--2x" datetime="{{ .Params.event.date_range }}" title="{{ .Params.event.date_range }}">{{ .Params.event.date_range }}</time>

@@ -1,9 +1,9 @@
-<div class="summary-title">
+<div class="summary-header">
   recent {{ .resourceType }}
-  <a href="{{ (.content.Site.GetPage "section" .resourceType).Permalink }}" class="summary-title__all" title="see all {{ .resourceType }}">see all</a>
+  <a href="{{ (.content.Site.GetPage "section" .resourceType).Permalink }}" title="see all {{ .resourceType }}">see all</a>
 </div>
 
-<ul class="summary">
+<ul class="list">
   {{ $partialName := delimit (slice "mappers/item-mapper-" .resourceType ".html") "" }}
 
   {{ range first 5 (where (.content.Site.RegularPages.ByParam .sortKey).Reverse "Section" .resourceType) }}

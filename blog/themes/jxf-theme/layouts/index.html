@@ -23,15 +23,13 @@
     </div>
   </section>
 
-  <div class="container--lg">
-      <div class="grid-row">
-        <section class="summary-container">
-          {{ partial "summary-content-list.html" (dict "resourceType" "entries" "sortKey" "date" "content" .) }}
-        </section>
-
-        <section class="summary-container">
-          {{ partial "summary-content-list.html" (dict "resourceType" "events" "sortKey" "event.date_range" "content" .) }}
-        </section>
-      </div>
+  <div class="container--lg summary-container">
+    <section>
+      {{ partial "summary-content-list.html" (dict "resourceType" "entries" "sortKey" "date" "content" .) }}
+    </section>
+    
+    <section>
+      {{ partial "summary-content-list.html" (dict "resourceType" "events" "sortKey" "event.date_range" "content" .) }}
+    </section>
   </div>
 {{ end }}
