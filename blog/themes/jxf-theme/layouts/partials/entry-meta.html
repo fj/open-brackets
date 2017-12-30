@@ -1,7 +1,7 @@
 {{ partial "icon.html" (dict "icon" .Params.icon) . }}
 
 <div class="content-sidebar muted--2x">
-  <time class="content-item__date" datetime="{{ .Date }}" title="{{ .Date.Format "2006-01-02 @ 15:04:05" }}">{{ .Date.Format "2006-01-02" }}</time>
+  <time datetime="{{ .Date }}" title="{{ .Date.Format "2006-01-02 @ 15:04:05" }}">{{ .Date.Format "2006-01-02" }}</time>
 
   <br>
 
@@ -9,7 +9,7 @@
 
   {{ with .Params.tags }}
     {{ range . }}
-      <div class="content-item__taxonomy">
+      <div class="content-taxonomy">
         <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
       </div>
     {{ end }}

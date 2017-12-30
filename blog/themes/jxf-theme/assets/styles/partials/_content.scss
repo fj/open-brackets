@@ -32,7 +32,7 @@
   display: block;
 }
 
-.content-item__taxonomy {
+.content-taxonomy {
   display: block;
 }
 
@@ -80,6 +80,11 @@ article {
   @extend .container--lg;
   margin-top: $margin * 3;
 
+  & > .jf-i {
+    @extend .h3;
+    font-family: 'fontawesome';
+  }
+
   @supports (display: grid) {
     display: grid;
     grid-template-columns: 25% 75%;
@@ -111,7 +116,7 @@ article {
   @supports (display: grid) {
     grid-template-rows: 3rem 3rem auto;
 
-    .content-item__date {
+    time {
       grid-column-start: 1;
       grid-row-start: 2;
     }
@@ -139,8 +144,6 @@ article {
     grid-row-gap: $margin;
 
     & > .jf-i {
-      @extend .h3;
-      font-family: 'fontawesome';
       grid-row-start: 1;
       grid-column-start: 1;
     }
