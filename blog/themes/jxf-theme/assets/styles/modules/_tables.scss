@@ -3,6 +3,7 @@ table {
   margin: 2rem 0;
   font-size: 1rem;
   padding: 0;
+
   tr {
     border-top: 1px solid #cccccc;
     background-color: white;
@@ -13,14 +14,12 @@ table {
       background-color: #f8f8f8;
       font-weight: bold;
       border: 1px solid #cccccc;
-      text-align: left;
       margin: 0;
       padding: 6px 13px;
     }
 
     td {
       border: 1px solid #cccccc;
-      text-align: left;
       margin: 0;
       padding: 6px 13px;
     }

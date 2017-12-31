@@ -52,7 +52,7 @@ Charlottesville forms a triangle with Washington, DC two hours away to the north
 
 Weather is very pleasant. There's about 220 days of sunshine per year, so it's much more likely to be sunny than not, and there's usually a light west-to-east wind coming from the mountains.
 
-{{% table rotated="true" small="true" %}}
+{{% table class="rotated-text small full-width" %}}
 | property | San Francisco, CA | New York, NY | Washington, DC | Charlottesville, VA |
 | ---- |:----:|:----:|:----:|:----:|
 | annual total precipitation (in) | 20.7 | 49.9 | 39.7 | 46.7 |
@@ -86,7 +86,7 @@ Extreme weather is rare. Occasionally Atlantic hurricanes make landfall near Cha
 
 * **Breweries:** The craft brewing scene is in full swing in and around Charlottesville; a few breweries have national acclaim. Because of a quirk in the alcohol regulations of Virginia, many breweries that don't serve food let you bring your own food in (as long as you buy their beer).
 
-  This results in a number of such breweries being interesting local meetup spots for friends or groups; you bring your own pizza and the beer's already waiting for you. The most convenient ones to Charlottesville are [South Street Brewery](http://southstreetbrewery.com/), [Three Notch'd](http://threenotchdbrewing.com/), and [Champion Brewery](http://championbrewingcompany.com/). Farther out are [Devil's Backbone](http://dbbrewingcompany.com/), [Wild Wolf](https://www.wildwolfbeer.com/), and [Blue Mountain Brewery](http://www.bluemountainbrewery.com/).
+{{% li invisible="true" %}}This results in a number of such breweries being interesting local meetup spots for friends or groups; you bring your own pizza and the beer's already waiting for you. The most convenient ones to Charlottesville are [South Street Brewery](http://southstreetbrewery.com/), [Three Notch'd](http://threenotchdbrewing.com/), and [Champion Brewery](http://championbrewingcompany.com/). Farther out are [Devil's Backbone](http://dbbrewingcompany.com/), [Wild Wolf](https://www.wildwolfbeer.com/), and [Blue Mountain Brewery](http://www.bluemountainbrewery.com/).{{% /li %}}
 
 * **Wineries:** There are [several dozen wineries](http://www.visitcharlottesville.org/visitors/things-to-do/vineyards-and-breweries/) with tastes and portfolios to suit almost anyone. Charlottesville also has two area cideries, [Albemarle Cider Works](https://www.albemarleciderworks.com/) and [Castle Hill Cider](http://castlehillcider.com/), that put out consistently great offerings.
 
@@ -125,18 +125,25 @@ table .very-bad {
   color: crimson;
   font-weight: bold;
 }
+
+table tr th:last-child {
+  opacity: 1;
+}
 </style>
 
-| property (national = 1×) | <span>San Francisco, CA</span>{:.muted--3x} | <span>New York, NY</span>{:.muted--3x} | <span>Washington, DC</span>{:.muted--3x} | Charlottesville, VA |
-| ---- |:----:|:----:|:----:|:----:|:----:|
-| goods and services     | 1.1× | <span>1.5×</span>{:.bad} | <span>1.0×</span>{:.best} | 1.1× |
-| groceries              | 1.2× | <span>1.5×</span>{:.bad} | 1.1× | <span>1.0×</span>{:.best} |
-| health care            | 1.1× | 1.1× | 1.0× | <span>1.0×</span>{:.best} |
-| housing                | <span>3.4×</span>{:.very-bad} | <span>2.3×</span>{:.very-bad} | <span>2.1×</span>{:.very-bad} | <span>1.4×</span>{:.best} |
-| transportation         | 1.1× | 1.3× | 1.0× | <span>1.0×</span>{:.best} |
-| utilities              | 1.0× | <span>1.4×</span>{:.bad} | 1.0× | <span>0.9×</span>{:.best} |
-| overall cost of living | <span>1.8×</span>{:.very-bad} | <span>1.7×</span>{:.bad} | <span>1.3×</span>{:.bad} | <span>1.1×</span>{:.best} |
-{:.rotated-text.full-width.small}
+
+{{% table class="rotated-text small full-width" %}}
+| property (national = 1×) | San Francisco, CA | New York, NY | Washington, DC | Charlottesville, VA |
+| ---- |:----:|:----:|:----:|:----:|
+| goods and services     | 1.1× | <span class="bad">1.5×</span> | <span class="best">1.0×</span> | 1.1× |
+| groceries              | 1.2× | <span class="bad">1.5×</span> | 1.1× | <span class="best">1.0×</span> |
+| health care            | 1.1× | 1.1× | 1.0× | <span class="best">1.0×</span> |
+| housing                | <span class="very-bad">3.4×</span> | <span class="very-bad">2.3×</span> | <spa class="very-bad">2.1×</span> | <span class="best">1.4×</span> |
+| transportation         | 1.1× | 1.3× | 1.0× | <span class="best">1.0×</span> |
+| utilities              | 1.0× | <span class="bad">1.4×</span> | 1.0× | <span class="best">0.9×</span> |
+| overall cost of living | <span class="very-bad">1.8×</span> | <span class="bad">1.7×</span> | <span class="bad">1.3×</span> | <span class="best">1.1×</span> |
+{{% /table %}}
+
 
 > Sources: [AreaVibes cost of living summaries](http://www.areavibes.com/) rounded to two significant figures, [US Census Bureau ACS PUMS](http://www.census.gov/programs-surveys/acs/technical-documentation/pums.html).
 
@@ -144,14 +151,16 @@ table .very-bad {
 
 Charlottesville's general quality of life is excellent, especially given the low cost of living. About 90% of Charlottesville residents rated it an "excellent" or "good" place to live, according to the 2014 National Community Survey.
 
-| property | <span>San Francisco, CA</span>{:.muted--3x} | <span>New York, NY</span>{:.muted--3x} | <span>Washington, DC</span>{:.muted--3x} | Charlottesville, VA |
-| ---- |:----:|:----:|:----:|:----:|:----:|
-| weekly commute time (hours) | <span>4:57</span>{:.bad} | <span>6:18</span>{:.bad} | <span>4:49</span>{:.very-bad} | <span>1:26</span>{:.best} |
-| monthly rent, 1 BR apartment | $3,500 | $3,000 | $2,000 | <span>$1,100</span>{:.best} |
-| marginal state income tax rate at $100,000 | 9.3% | 6.7% | 8.5% | <span>5.8%</span>{:.best} |
-| general sales tax rate | 8.8% | 8.9% | 5.8% | <span>5.3%</span>{:.best} |
-| walkability score at median rent | 71 | 89 | <span>96</span>{:.best} | 95 |
-{:.rotated-text.full-width.small}
+{{% table class="rotated-text small full-width center-td" %}}
+| property | San Francisco, CA | New York, NY | Washington, DC | Charlottesville, VA |
+| ---- |:----:|:----:|:----:|:----:|
+| weekly commute time (hours) | <span class="bad">4:57</span> | <span class="bad">6:18</span> | <span class="very-bad">4:49</span>| <span class="best">1:26</span> |
+| monthly rent, 1 BR apartment | $3,500 | $3,000 | $2,000 | <span class="best">$1,100</span> |
+| marginal state income tax rate at $100,000 | 9.3% | 6.7% | 8.5% | <span class="best">5.8%</span> |
+| general sales tax rate | 8.8% | 8.9% | 5.8% | <span class="best">5.3%</span> |
+| walkability score at median rent | 71 | 89 | <span class="best">96</span> | 95 |
+{{% /table %}}
+
 
 ## Major concerns
 
@@ -183,6 +192,7 @@ The most visible Charlottesville employer is the [University of Virginia](http:/
 
 Other interesting technology employers of note include (but are certainly not limited to):
 
+<div class="small">
 * [ArcheMedX](http://www.archemedx.com/), healthcare informatics and e-learning provider for clinical professionals.
 * [Borrowed and Blue](http://www.borrowedandblue.com/), wedding marketplace startup connecting vendors with couples.
 * [CCRi](http://ccri.com), software engineering and data science company.
@@ -201,7 +211,7 @@ Other interesting technology employers of note include (but are certainly not li
 * [UpHex](https://uphex.com), analytics monitoring and reporting startup for businesses.
 * [VividCortex](https://vividcortex.com/), SaaS provider of performance management tools purpose-built for databases.
 * [WillowTree Apps](http://www.willowtreeapps.com/), small mobile-apps development firm and winner of multiple [Webby awards](http://webbyawards.com/winners/2015/).
-{:.small}
+</div>
 
 ## Job diversity
 
@@ -238,13 +248,11 @@ While there is some capital for startups available, Charlottesville doesn't have
 
 * **Government entities.** The CIT GAP Funds, which are funded with state income tax revenue and run as a quasi-private institution, serve as a de facto form of seed capital. As of 2014, CIT has invested about $13M across about 100 portfolio companies, of which about 15 have been acquired or gone public. Student entrepreneurs have some additional options in the form of seed funds at the University, like the [Virginia Venture Fund](http://virginiaventurefund.squarespace.com/).
 
-<aside markdown="1">
-  ["Center for Innovative Technology fund is among region’s most active angel investors"](http://www.washingtonpost.com/business/capitalbusiness/center-for-innovative-technology-fund-is-among-regions-most-active-angel-investors/2014/04/25/6aa9be50-ca3c-11e3-a75e-463587891b57_story.html), Washington Post, April 27, 2014.
-</aside>
+{{% margin %}}
+["Center for Innovative Technology fund is among region’s most active angel investors"](http://www.washingtonpost.com/business/capitalbusiness/center-for-innovative-technology-fund-is-among-regions-most-active-angel-investors/2014/04/25/6aa9be50-ca3c-11e3-a75e-463587891b57_story.html), Washington Post, April 27, 2014.
+{{% /margin %}}
 
 ## Meetups
-
-{{< margin >}}["Center for Innovative Technology fund is among region’s most active angel investors"](http://www.washingtonpost.com/business/capitalbusiness/center-for-innovative-technology-fund-is-among-regions-most-active-angel-investors/2014/04/25/6aa9be50-ca3c-11e3-a75e-463587891b57_story.html), Washington Post, April 27, 2014."{{< /margin >}}
 
 Charlottesville has a relatively diverse technical community. Local or regional meetups are hosted for a number of major languages -- Ruby, Python, .NET, and so on. Charlottesville technologists seem to be polyglots more often than not, perhaps motivated by the diversity of the technical jobs in the area. A general software-technologist group focusing on software craftspersonship, [beCraft](https://groups.google.com/forum/#!forum/becraft), is well-attended. There are also less structured and more social meetups like First Wednesdays and [Charlottesville Women in Tech](http://www.charlottesvillewomenintech.com/).
 
