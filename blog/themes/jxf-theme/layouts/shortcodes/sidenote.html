@@ -1,7 +1,9 @@
-{{ if .Get "inline" }}<span class="sidenote">{{ else }}<div class="sidenote">{{ end }}
+{{ with .Get 0 }}
+  <label for="{{ . | urlize }}" class="margin-toggle sidenote-number"><span>&#8853;</span></label>
+  <input type="checkbox" id="{{ . | urlize }}" class="margin-toggle"/>
+{{ else }}
+  <label for="{{ .Inner | truncate 10 | urlize }}-{{ sha1 .Inner }}" class="margin-toggle sidenote-number"><span>&#8853;</span></label>
+  <input type="checkbox" id="{{ .Inner | truncate 10 | urlize }}-{{ sha1 .Inner }}" class="margin-toggle"/>
+{{ end }}
 
-{{ .Inner }}
-
-{{ with .Get "hash" }}{{ . }}{{ end }}
-
-{{ if .Get "inline" }}</span>{{ else }}</div>{{ end }}
+<span class="sidenote">{{ .Inner }}</span>

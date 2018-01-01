@@ -116,7 +116,6 @@ $$ \frac{123}{999} $$
 $$ \frac{123}{999} = \frac{41}{333} $$
 ```
 
-
 ### Images
 
 ![Image of Cat](http://lorempixel.com/output/cats-q-c-640-480-1.jpg)
@@ -126,3 +125,10 @@ $$ \frac{123}{999} = \frac{41}{333} $$
 ![Image of Cat](http://lorempixel.com/output/cats-q-c-640-480-1.jpg)
 
 {{% caption %}}Caption [with link](#){{% /caption %}}
+
+
+### Side Notes
+
+One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.{{< sidenote >}}This is a sidenote. Accepts an optional positional argument that is the side note id. {{< /sidenote >}} Sidenotes are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead display off to the side in the margin. Perhaps you have noticed their use in this document already.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quo aspernatur dolor sed voluptate repudiandae inventore deleniti commodi reprehenderit fugit, animi doloremque obcaecati, dolores debitis, {{< sidenote >}}This is another sidenote *without* a reference to demonstrate that it is optional{{< /sidenote >}} quis porro? Assumenda, nisi, tenetur!

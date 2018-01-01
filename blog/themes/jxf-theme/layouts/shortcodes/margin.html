@@ -1,4 +1,4 @@
-{{ with .Get "label" }}
+{{ with .Get "id" }}
   <label for="{{ . | urlize }}" class="margin-toggle">&#8853;</label>
   <input type="checkbox" id="{{ . | urlize }}" class="margin-toggle"/>
 {{ else }}

@@ -1,8 +1,8 @@
 body {
-  counter-reset: sidenote-counter;
 }
 
 article {
+  counter-reset: sidenote-counter;
   position: relative;
 }
 
@@ -45,7 +45,7 @@ article > :not(canvas):not(.full-width).marginnote {
   counter-increment: sidenote-counter;
 
   &:after {
-    content: counter(sidenote-counter);
+    content: counter(sidenote-counter) " ";
     font-size: 1rem;
     top: -0.5rem;
   }
@@ -69,7 +69,18 @@ article > :not(canvas):not(.full-width).marginnote {
 
 label {
   &.sidenote-number {
-    display: inline;
+    span {
+      display: none;
+
+      @media (max-width: 60em) {
+        display: inline;
+      }
+    }
+
+      &:before,
+      &:after {
+        display: inline;
+      }
   }
 
   &.margin-toggle:not(.sidenote-number) {
