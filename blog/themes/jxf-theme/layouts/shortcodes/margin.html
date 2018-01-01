@@ -1,5 +1,9 @@
-{{ if .Get "inline" }}<span class="marginnote">{{ .Inner }}</span>{{ else }}
-  <div class="marginnote">
-    {{ .Inner }}
-  </div>
+{{ with .Get "label" }}
+  <label for="{{ . | urlize }}" class="margin-toggle">&#8853;</label>
+  <input type="checkbox" id="{{ . | urlize }}" class="margin-toggle"/>
+{{ else }}
+  <label for="{{ .Inner | truncate 10 | urlize }}-{{ sha1 .Inner }}" class="margin-toggle">&#8853;</label>
+  <input type="checkbox" id="{{ .Inner | truncate 10 | urlize }}-{{ sha1 .Inner }}" class="margin-toggle"/>
 {{ end }}
+
+<span class="marginnote">{{ .Inner }}</span>

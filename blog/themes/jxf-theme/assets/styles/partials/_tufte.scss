@@ -2,7 +2,9 @@ body {
   counter-reset: sidenote-counter;
 }
 
-
+article {
+  position: relative;
+}
 
 .marginnote,
 .sidenote,
@@ -10,23 +12,23 @@ article > :not(canvas):not(.full-width).sidenote,
 article > :not(canvas):not(.full-width).marginnote {
   float: right;
   clear: right;
-  width: 33%;
-  margin-right: -8%;
+  width: 30%;
   margin-top: 0;
   margin-bottom: 0;
   font-family: $sans-font-family__alt;
   font-size: 0.88rem;
   opacity: 0.75;
   vertical-align: baseline;
-  position: relative;
+  position: absolute;
+  right: -10%;
 
   @media (max-width: 60em) {
     display: none;
   }
 
   @media (max-width: 76em) {
-    width: 28%;
-    margin-right: -2%;
+    width: 25%;
+    right: -1%;
   }
 
   .MathJax_SVG_Display {
@@ -36,14 +38,6 @@ article > :not(canvas):not(.full-width).marginnote {
 
   p {
     font-size: 0.88rem;
-  }
-}
-
-span.marginnote {
-  margin-right: -39%;
-
-  @media (max-width: 76em) {
-    margin-right: -39%;
   }
 }
 

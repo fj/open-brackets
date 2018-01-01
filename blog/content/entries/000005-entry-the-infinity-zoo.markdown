@@ -242,7 +242,7 @@ We're beginning to get the tools we need to wrangle the infinities into our gras
 
 We can order the ordinals by saying that $$i_{\mathtt{ord}} < j_{\mathtt{ord}}$$ if and only if $$i_{\mathtt{ord}} \in j_{\mathtt{ord}}\$$. Remember, before we saw that ordinals are actually sets comprising all the previous ordinals; for instance, $$3_{\mathtt{ord}} = \{0_{\mathtt{ord}}, 1_{\mathtt{ord}}, 2_{\mathtt{ord}}\}$$. So our ordering is obtained by looking to see whether an ordinal is already contained in another ordinal; if it is, then it's a lesser ordinal.
 
-The first _infinite ordinal_ is what we get when we consider the set of all finite ordinals. This is the order type of a sequence which is well-ordered{{% margin inline="true" %}}Remember, well-orderings only need a _least_ element, not a greatest one.{{% /margin %}}but doesn't have a final element:
+The first _infinite ordinal_ is what we get when we consider the set of all finite ordinals. This is the order type of a sequence which is well-ordered {{% margin %}}Remember, well-orderings only need a _least_ element, not a greatest one.{{% /margin %}} but doesn't have a final element:
 
 $$
   (0, 1, 2, \cdots)

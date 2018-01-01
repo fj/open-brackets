@@ -1,0 +1,7 @@
+{{ if .Get "inline" }}<span class="sidenote">{{ else }}<div class="sidenote">{{ end }}
+
+{{ .Inner }}
+
+{{ with .Get "hash" }}{{ . }}{{ end }}
+
+{{ if .Get "inline" }}</span>{{ else }}</div>{{ end }}
