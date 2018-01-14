@@ -3,11 +3,21 @@
 //
 
 .summary-container {
-  display: grid;
-  justify-items: stretch;
-  grid-template-columns: 50% 50%;
-  grid-row-gap: 1rem;
-  grid-column-gap: 2rem;
+  section { width: 100%; }
+
+  @supports (display: grid) {
+    section { width: auto; }
+
+    display: grid;
+    justify-items: stretch;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+    grid-template-columns: 100%;
+
+    @media (min-width: 48em) {
+      grid-template-columns: 49% 49%;
+    }
+  }
 }
 
 .summary-header {

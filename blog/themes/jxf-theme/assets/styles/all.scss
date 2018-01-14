@@ -1,13 +1,15 @@
 @import "variables/base";
 
 @import "components/font-awesome/font-awesome";
-@import "components/hero";
+@import "components/code-blocks";
+@import "components/grid";
 @import "components/header";
-@import "components/list";
-@import "components/summary";
+@import "components/hero";
 @import "components/icons";
-@import "components/social";
+@import "components/links";
+@import "components/list";
 @import "components/media-object";
+@import "components/social";
 
 @import "modules/reset";
 @import "modules/tables";
@@ -16,17 +18,15 @@
 @import "modules/responsive-utilities";
 @import "modules/utilities";
 
-@import "partials/grid";
-@import "partials/links";
-@import "partials/images";
+@import "partials/typography";
+@import "partials/blockquotes";
 @import "partials/borders";
 @import "partials/categories";
-@import "partials/typography";
-@import "partials/type-scale";
-@import "partials/projects";
+@import "partials/content";
+@import "partials/images";
 @import "partials/post-meta";
-@import "partials/code-blocks";
-@import "partials/blockquotes";
+@import "partials/projects";
+@import "partials/summary";
 @import "partials/syntax-highlighting";
 @import "partials/tufte";
-@import "partials/content";
+@import "partials/type-scale";

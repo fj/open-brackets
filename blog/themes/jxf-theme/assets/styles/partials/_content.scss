@@ -86,6 +86,33 @@ article {
     font-family: 'fontawesome';
   }
 
+  // CSS Grid Fallback Styles
+  .content-sidebar {
+    float: left;
+    width: 30%;
+  }
+
+  article,
+  .content-title,
+  .content-subtitle,
+  .content-more {
+    float: right;
+    width: 70%;
+  }
+
+  .content-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  & > .jf-i {
+    display: none;
+  }
+
+  article {
+    padding-top: 0;
+  }
+
   @supports (display: grid) {
     display: grid;
     grid-template-columns: 22% 75%;
@@ -98,9 +125,22 @@ article {
     article,
     .content-title,
     .content-subtitle,
+    .content-sidebar,
+    .content-more {
+      float: none;
+      width: auto;
+    }
+
+    article,
+    .content-title,
+    .content-subtitle,
     .content-sidebar {
       margin: 0;
       padding: 0;
+    }
+
+    & > .jf-i {
+      display: block;
     }
 
     & > .jf-i,
@@ -141,7 +181,6 @@ article {
     }
   }
 }
-
 
 .entry {
   @supports (display: grid) {
