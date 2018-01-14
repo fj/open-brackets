@@ -118,11 +118,11 @@ $$ \frac{123}{999} = \frac{41}{333} $$
 
 ### Images
 
-![Image of Cat](http://lorempixel.com/output/cats-q-c-640-480-1.jpg)
+![chocolate cake with the text 'Happy Birthday, Cheryl' written in frosting](/entries/cheryl.jpg)
 
 {{< caption >}}Image Caption{{< /caption >}}
 
-![Image of Cat](http://lorempixel.com/output/cats-q-c-640-480-1.jpg)
+![serpentine walls at the University of Virginia](/entries/charlottesville-serpentine.jpg)
 
 {{% caption %}}Caption [with link](#){{% /caption %}}
 

@@ -19,7 +19,7 @@ It's difficult to describe the advantages and disadvantages of Charlottesville s
 
 # Brief local history
 
-![serpentine walls at the University of Virginia]({{ page.image_asset_path }}/charlottesville-serpentine.jpeg)
+![serpentine walls at the University of Virginia](/entries/charlottesville-serpentine.jpg)
 
 {{< caption >}}Serpentine walls at the University of Virginia. [Source.](https://en.wikipedia.org/wiki/University_of_Virginia#/media/File:Serpentine_wall_UVa_daffodils_2010.jpg){{< /caption >}}
 
