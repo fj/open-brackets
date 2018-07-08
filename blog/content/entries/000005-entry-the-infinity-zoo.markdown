@@ -1,12 +1,15 @@
 ---
 title:        "The Infinity Zoo: What is Infinity?"
 date:         2015-04-24T08:00:00Z
+published:    true
+description:  "Exploring the nature of infinity. What does infinity mean?"
+comments:     true
+subscribers:  true
+slug:         "the-infinity-zoo"
+icon:         post
 tags:
   - math
   - numbers
-description: >
-  Exploring the nature of infinity. What does infinity mean?
-markup: mmark
 ---
 
 > <div style="white-space: pre">To see a world in a grain of sand,
@@ -24,15 +27,17 @@ But what _is_ infinity, exactly? It turns out there are many kinds and instances
 
 ![a perspective shot of a building in Toronto stretching into the sky]({{ page.image_asset_path }}/toronto-skyscraper.jpg)
 
+{{< caption >}}
 A tower in Toronto's financial district stretches high into the evening sky. [Source.](https://flic.kr/p/nDw3D3)
-{:.caption}
+{{< /caption >}}
 
 People have been grappling with the philosophy of infinity for centuries, and mathematics is no exception. The ancients, especially Indian, Greek, and Arab mathematicians, readily entertained the notion of two kinds of infinity. One kind was called _potential infinity_; the Greeks called it [apeiron](http://en.wikipedia.org/wiki/Apeiron_%28cosmology%29) (ἄπειρον, "without end"). The other kind was called _actual infinity_.
 
 ![diagram describing potential infinity]({{ page.image_asset_path }}/chart-entry-potential-infinity.png)
 
+{{< caption >}}
 Potential infinity allows a process to be repeated as many times as you would like -- for example, adding a new number to a list -- but no matter when you stop, the result is always finite.
-{:.caption}
+{{< /caption >}}
 
 Essentially, a potential infinity describes two things: a bag that holds items, and a process that adds items to the bag which can be repeated indefinitely.
 
@@ -113,7 +118,8 @@ Again, our attempt at infinity has yielded a very finite number. It's clear that
 ## "Infinitely" long sequences: the length of $$ 0, 1, 2, 3, \cdots $$
 
 Our third example, the length of $$ 0, 1, 2, 3, \cdots $$, looks more promising. Unlike our repeating-decimal example, there doesn't seem to be an obvious way we can simply change the problem's representation to wind up with something finite. This sequence of natural numbers increases slowly but surely, upwards forever without bound.
-{% margin %}The natural numbers have their name because they are what we would use to count things, which is perhaps the most "natural" use for numbers. Conveniently, each number describes both its position in the natural numbers and the count of the things it would label.{% endmargin %}
+
+{{< margin >}}The natural numbers have their name because they are what we would use to count things, which is perhaps the most "natural" use for numbers. Conveniently, each number describes both its position in the natural numbers and the count of the things it would label.{{< /margin >}}
 
 Is this infinity, at last? And if so, is it just the integer that goes at the end of the natural number line, as shown below?
 
@@ -139,7 +145,8 @@ Our earlier attempts at trying to wrangle infinity into a conventional number fa
 One property of infinity that seems worth capturing is the idea of _size_: infinity seems like it should be indefinitely large, larger than anything else. Another is the idea of _ordering_: infinity seems like it should come last, after everything else.
 
 We can represent these two properties by using two special kinds of numbers: _cardinal_ and _ordinal_ numbers.
-{% margin %}Ordinal and cardinal numbers are relevant for finite quantities too, but in that case, their ideas coincide, which isn't very interesting. That is, the ordinal number "5" describes a set with five things that has a particular order, and the cardinal number "5" represents a set with five things. Over natural numbers, they would describe the same set: \(\{0, 1, 2, 3, 4\}\).{% endmargin %}
+
+{{< margin >}}Ordinal and cardinal numbers are relevant for finite quantities too, but in that case, their ideas coincide, which isn't very interesting. That is, the ordinal number "5" describes a set with five things that has a particular order, and the cardinal number "5" represents a set with five things. Over natural numbers, they would describe the same set: \(\{0, 1, 2, 3, 4\}\).{{< /margin >}}
 
 ## Cardinal numbers
 
@@ -171,8 +178,9 @@ To see why it's true that the even natural numbers $$2\mathbb{N}$$ have the same
 
 ![diagram showing a mapping of natural numbers to even natural numbers]({{ page.image_asset_path }}/chart-entry-set-cardinality.png)
 
+{{< caption >}}
 If we can define a bijection between any two sets, like we do here, we know they must be the same cardinality.
-{:.caption}
+{{< /caption >}}
 
 Since we were able to pair each element of one set with the other with no left-over elements, the sets must have the same cardinality. And since $$\vert \mathbb{N} \vert = \aleph_{0}$$, then it must be true that $$\vert 2\mathbb{N} \vert = \aleph_{0}$$.
 
@@ -181,7 +189,8 @@ A similar approach applies for almost any other infinite subset of the natural n
 ## Ordinal numbers
 
 Whereas cardinality and cardinal numbers describe the _size_ of sets, we can also talk about the _order_ of sets, too. Ordinal numbers describe a particular kind of ordering of the elements in sets, called a _well-ordering_.
-{% margin %}Sometimes mathematicians drop the hyphen and write _wellordering_ or _wellorder_, making it one word. We'll keep it here for clarity.{% endmargin %}
+
+{{% margin %}}Sometimes mathematicians drop the hyphen and write _wellordering_ or _wellorder_, making it one word. We'll keep it here for clarity.{{% /margin %}}
 
 For an ordering to be a well-ordering, it must have two properties:
 
@@ -215,9 +224,10 @@ $$\begin{eqnarray}
   5_{\mathtt{ord}} & \equiv & 4_{\mathtt{ord}} \cup \{4_{\mathtt{ord}}\} = \{0_{\mathtt{ord}}, 1_{\mathtt{ord}}, 2_{\mathtt{ord}}, 3_{\mathtt{ord}}, 4_{\mathtt{ord}}\} & = & \cdots \\
 \end{eqnarray}$$
 
-{% margin %}
+{{% margin %}}
 By convention, we generally don't write the `ord` subscript, so ordinals look like natural numbers without more context.
-{% endmargin %}
+{{% /margin %}}
+
 Just as cardinal numbers are the possible answers to the question, "How many elements are in this set?", the ordinal numbers are the possible answers to "What is the order type of this set?" The order type describes the arrangement of the items in the set as a sequence. An order type of 3, for example, means that we expect to see 3 elements in the set:
 
   * the smallest element
@@ -232,13 +242,13 @@ We're beginning to get the tools we need to wrangle the infinities into our gras
 
 We can order the ordinals by saying that $$i_{\mathtt{ord}} < j_{\mathtt{ord}}$$ if and only if $$i_{\mathtt{ord}} \in j_{\mathtt{ord}}\$$. Remember, before we saw that ordinals are actually sets comprising all the previous ordinals; for instance, $$3_{\mathtt{ord}} = \{0_{\mathtt{ord}}, 1_{\mathtt{ord}}, 2_{\mathtt{ord}}\}$$. So our ordering is obtained by looking to see whether an ordinal is already contained in another ordinal; if it is, then it's a lesser ordinal.
 
-The first _infinite ordinal_ is what we get when we consider the set of all finite ordinals. This is the order type of a sequence which is well-ordered{% margin %}Remember, well-orderings only need a _least_ element, not a greatest one.{% endmargin %} but doesn't have a final element:
+The first _infinite ordinal_ is what we get when we consider the set of all finite ordinals. This is the order type of a sequence which is well-ordered {{% margin %}}Remember, well-orderings only need a _least_ element, not a greatest one.{{% /margin %}} but doesn't have a final element:
 
 $$
   (0, 1, 2, \cdots)
 $$
 
-We call this ordinal $$\omega$${% margin %}$$\omega$$ is the Greek lowercase letter "omega", so we usually just say "omega" when we're reading it out loud. You may have already seen the uppercase version, $$\Omega$$.{% endmargin %}. The next ordinal is, perhaps not surprisingly, $$\omega + 1$$, and we define it just like we did all the previous ordinals:
+We call this ordinal $$\omega$$ {{< margin >}}$$\omega$$ is the Greek lowercase letter "omega", so we usually just say "omega" when we're reading it out loud. You may have already seen the uppercase version, $$\Omega$$.{{< /margin >}}. The next ordinal is, perhaps not surprisingly, $$\omega + 1$$, and we define it just like we did all the previous ordinals:
 
 $$
   \omega + 1 \equiv \omega \cup \{\omega\} = \{0_{\mathtt{ord}}, 1_{\mathtt{ord}}, 2_{\mathtt{ord}}, \cdots, \omega\}
@@ -304,8 +314,9 @@ The choice of infinite structure we make -- the choice of what to consider impor
 
 ![the cardinality of the line and the plane are the same]({{ page.image_asset_path }}/chart-entry-cardinality-line-plane.png)
 
+{{< caption >}}
 The cardinality of any line and any plane are the same, since we can construct a bijection between any point on the line and any point on the plane.
-{:.caption}
+{{< /caption >}}
 
 For example, the number of points on a line is the same as the number of points on a plane. This an idea that seems impossible at first: the plane has more dimensions than the line. Not only does the line fit into the plane, it does so infinitely many times. But this is exactly the kind of structure that doesn't need to be preserved in comparing cardinalities. The bijection between a line and a point cares only about whether the mapping is possible at all, and not whether it comports with our notions of how reality works. And the bijection does, in fact, exist; see [space-filling curves](http://en.wikipedia.org/wiki/Space-filling_curve).
 

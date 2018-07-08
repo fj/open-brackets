@@ -2,6 +2,10 @@ baseurl: http://jxf.me
 title: jxf
 metaDataFormat: yaml
 
+pygmentsCodeFences: true
+pygmentsUseClasses: true
+pygmentsCodeFencesGuessSyntax: true
+
 # Default locale is en-US.
 # Casing is nonstandard; Hugo wants locales like `en-us`, but  i18n file names like `en-US`.
 defaultContentLanguage: "en-us"

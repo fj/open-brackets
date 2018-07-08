@@ -2,61 +2,49 @@
 // Content items: single entries, entries in lists, event entries
 //
 
-.content-item {  // ??
-  @media (max-width: 72em) {
-    .jf-i {
-      display: none;
+.content-title {
+  margin-top: $margin*3;
+  margin-bottom: $margin*2;
+  line-height: 1.8rem;
+}
+
+.content-subtitle {
+  @extend .muted--2x;
+  @extend .h5;
+
+  font-family: $sans-font-family;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: .75rem;
+  line-height: 1.25rem;
+
+  span {
+    @extend .px1;
+
+    &:first-of-type {
+      padding-left: 0;
     }
   }
 }
 
-.content-item__title {
-  margin-top: $margin*3;
-  margin-bottom: $margin*2;
-}
-
-.content-item__row {
-  @extend .media-object;
-}
-
-.content-item__meta {
-  @extend .media-object-figure;
-  @extend .txt--right;
-  @extend .mr1;
-}
-
-.content-item__body {
-  @extend .media-object-body;
-}
-
-.content-item__icon {
-  .jf-i {
-    font-size: 0.9em;
-    position: absolute;
-    top: 0.5em;
-    left: -1.45em;
-  }
-}
-
-.content-item__more {
+.content-more {
   font-weight: bold;
   display: block;
 }
 
-.content-item__description {
-  margin-top: 1.5rem;
-}
-
-.content-item__taxonomy {
+.content-taxonomy {
   display: block;
 }
 
-.content-item__markdown {
+//
+// Markdown Content Styles
+article {
   @extend .py2;
 
-  p, ul, ol {
+  p, ul, ol, blockquote {
     margin-bottom: 0.9775rem;
     margin-top: 0;
+    font-size: 1.2rem;
   }
 
   h1 {
@@ -65,6 +53,7 @@
   }
 
   h2, h3, h4, h5, h6 {
+    text-align: left;
     margin-top: 0;
     margin-bottom: 0.9775rem;
   }
@@ -84,42 +73,138 @@
   }
 }
 
+
 //
-// Page specific overrides
+// Single event page (events/single.html)
+.entry,
+.event {
+  @extend .container--lg;
+  margin-top: $margin * 3;
 
-// List of content items (list.html)
-.content-item__list {
-  .h2, .h4 {
-    text-align: center;
+  & > .jf-i {
+    @extend .h3;
+    font-family: 'fontawesome';
   }
 
-  .list-item {
-    margin-bottom: $margin;
-    margin-top: $margin*2;
+  // CSS Grid Fallback Styles
+  .content-sidebar {
+    float: left;
+    width: 30%;
   }
 
-  .content-item__title {
+  article,
+  .content-title,
+  .content-subtitle,
+  .content-more {
+    float: right;
+    width: 70%;
+  }
+
+  .content-title {
     margin-top: 0;
+    margin-bottom: 1rem;
   }
 
-  @media (max-width: 70em) {
-    .jf-i {
-      display: none;
+  & > .jf-i {
+    display: none;
+  }
+
+  article {
+    padding-top: 0;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 22% 75%;
+    grid-column-gap: $margin * 2;
+
+    @media (max-width: 76em) {
+      grid-template-columns: 15% 80%;
+    }
+
+    article,
+    .content-title,
+    .content-subtitle,
+    .content-sidebar,
+    .content-more {
+      float: none;
+      width: auto;
+    }
+
+    article,
+    .content-title,
+    .content-subtitle,
+    .content-sidebar {
+      margin: 0;
+      padding: 0;
+    }
+
+    & > .jf-i {
+      display: block;
+    }
+
+    & > .jf-i,
+    .content-title,
+    .content-subtitle {
+      align-self: center;
+    }
+
+    & > .jf-i,
+    .content-sidebar {
+      text-align: right;
     }
   }
 }
 
-// Single event page (events/single.html)
-.content-item__event {
-  .content-item__title,
-  .content-item__icon {
-    margin: 0;
-    padding: 1rem 0;
-  }
+// CSS Grid styling to get items aligned well
+.event {
+  @supports (display: grid) {
+    grid-template-rows: 3rem 3rem auto;
 
-  .jf-i {
-    position: relative;
-    top: 0;
-    left: 0;
+    time {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+
+    .content-subtitle {
+      grid-row-start: 2;
+      grid-column-start: 2;
+    }
+
+    .content-sidebar {
+      grid-row-start: 3;
+    }
+
+    article {
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+  }
+}
+
+.entry {
+  @supports (display: grid) {
+    grid-template-rows: 4rem auto;
+    grid-row-gap: $margin;
+
+    & > .jf-i {
+      grid-row-start: 1;
+      grid-column-start: 1;
+    }
+
+    .content-sidebar {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+
+    .content-title {
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+
+    .content {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
   }
 }

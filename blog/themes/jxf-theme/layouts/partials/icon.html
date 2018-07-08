@@ -1,1 +1,19 @@
-<i class="jf-i jf-i-file"></i>
+{{ if eq .icon "talk" }}
+  <i class="jf-i jf-i-mortar-board"></i>
+{{ else if eq .icon "panel" }}
+  <i class="jf-i jf-i-users"></i>
+{{ else if eq .icon "lecture" }}
+  <i class="jf-i jf-i-users"></i>
+{{ else if eq .icon "interview" }}
+  <i class="jf-i jf-i-microphone"></i>
+{{ else if eq .icon "hackathon" }}
+  <i class="jf-i jf-i-code"></i>
+{{ else if eq .icon "other" }}
+  <i class="jf-i jf-i-flag"></i>
+{{ else if eq .icon "snippet" }}
+  <i class="jf-i jf-i-code"></i>
+{{ else if eq .icon "experiment" }}
+  <i class="jf-i jf-i-code"></i>
+{{ else }}
+  <i class="jf-i jf-i-file"></i>
+{{ end }}

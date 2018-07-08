@@ -1,21 +1,17 @@
-<div class="content-item__meta">
-  <h3 class="content-item__icon">
-    {{ partial "icon.html" }}
-  </h3>
+{{ partial "icon.html" (dict "icon" .Params.icon) . }}
 
-  <div class="muted--2x">
-    <time class="content-item__date" datetime="{{ .Date }}" title="{{ .Date.Format "2006-01-02 @ 15:04:05" }}">{{ .Date.Format "2006-01-02" }}</time>
+<div class="content-sidebar muted--2x">
+  <time datetime="{{ .Date }}" title="{{ .Date.Format "2006-01-02 @ 15:04:05" }}">{{ .Date.Format "2006-01-02" }}</time>
 
-    <br>
+  <br>
 
-    {{ .WordCount }} words
+  {{ .WordCount }} words
 
-    {{ with .Params.tags }}
-      {{ range . }}
-        <div class="content-item__taxonomy">
-          <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
-        </div>
-      {{ end }}
+  {{ with .Params.tags }}
+    {{ range . }}
+      <div class="content-taxonomy">
+        <a href="{{ "tags" | absURL }}/{{ . | urlize }}" title="{{ . }}" class="dotted-link caps">{{ . }}</a>
+      </div>
     {{ end }}
-  </div>
+  {{ end }}
 </div>

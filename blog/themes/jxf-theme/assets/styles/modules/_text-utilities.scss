@@ -29,14 +29,21 @@
   color: $text-color--light;
 }
 
-.caption {
+.caption,
+.caption p {
   @extend .small;
   border-bottom: thin solid $off-white;
   line-height: 1;
   padding: 0rem 0 .5rem;
   margin-top: .5rem;
-  text-align: center;
+  text-align: left;
   opacity: .9;
+}
+
+.caption p {
+  border-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .txt--right {

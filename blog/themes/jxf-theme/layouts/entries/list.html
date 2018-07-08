@@ -1,17 +1,15 @@
 {{ define "content" }}
-  <div class="container--lg content-item__list">
-    <h1 class="h2">{{ .Title }}</h1>
+  <h1 class="h2">{{ .Title }}</h1>
 
-    {{ if .Description }}
-      <h2 class="h4">{{ .Description }}</h2>
-    {{ end}}
+  {{ if .Description }}
+    <h2 class="h4 py1">{{ .Description }}</h2>
+  {{ end}}
 
-    {{ .Content }}
+  {{ .Content }}
 
-    <ul class="list">
-      {{ range .Data.Pages }}
-        {{ .Render "li" }}
-      {{ end }}
-    </ul>
-  </div>
+  <ul class="list">
+    {{ range .Data.Pages }}
+      {{ .Render "li" }}
+    {{ end }}
+  </ul>
 {{ end }}

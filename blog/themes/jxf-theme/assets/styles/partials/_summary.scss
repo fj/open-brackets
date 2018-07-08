@@ -1,0 +1,75 @@
+//
+// A list with links to content
+//
+
+.summary-container {
+  section { width: 100%; }
+
+  @supports (display: grid) {
+    section { width: auto; }
+
+    display: grid;
+    justify-items: stretch;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+    grid-template-columns: 100%;
+
+    @media (min-width: 48em) {
+      grid-template-columns: 49% 49%;
+    }
+  }
+}
+
+.summary-header {
+  @extend .caps;
+  @extend .muted;
+  @extend .sans;
+  @extend .bold;
+
+  margin-top: 2.414rem;
+  border-bottom: thin solid $off-white-dark;
+
+  a {
+    @extend .right;
+    @extend .thin;
+  }
+}
+
+.summary-item {
+  margin: 1rem 0 1.5rem 0;
+
+  a {
+    display: grid;
+    grid-template-columns: 1rem 4rem auto;
+    grid-column-gap: 1rem;
+  }
+
+  & a,
+  & a:visited {
+    color: $text-color;
+  }
+
+  & a:focus,
+  & a:hover,
+  & a:active, {
+    color: $link-color;
+  }
+
+  .jf-i,
+  time {
+    margin: 0;
+    padding-top: 5px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  time {
+    @extend .muted;
+    @extend .m0;
+  }
+
+  .content-title {
+    margin: 0;
+    text-align: left;
+  }
+}

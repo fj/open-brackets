@@ -3,6 +3,7 @@ table {
   margin: 2rem 0;
   font-size: 1rem;
   padding: 0;
+
   tr {
     border-top: 1px solid #cccccc;
     background-color: white;
@@ -13,24 +14,23 @@ table {
       background-color: #f8f8f8;
       font-weight: bold;
       border: 1px solid #cccccc;
-      text-align: left;
       margin: 0;
       padding: 6px 13px;
     }
 
     td {
       border: 1px solid #cccccc;
-      text-align: left;
       margin: 0;
       padding: 6px 13px;
     }
   }
 }
 
-table.rotated-text {
+.rotated-text {
   tr:first-child {
     border: none;
   }
+
   th {
     height: 6em;
     border: none;
@@ -39,9 +39,12 @@ table.rotated-text {
     transform-origin: left bottom;
     vertical-align: bottom;
     white-space: nowrap;
-  }
-  th:first-child {
-    transform: none;
+    @extend .muted--2x;
+
+    &:first-child {
+      transform: none;
+      opacity: 1;
+    }
   }
 }
 

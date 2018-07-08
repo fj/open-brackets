@@ -1,23 +1,29 @@
-{{ if .Draft }}
-  <div id="disqus_thread">This page isn't published yet, so comments are disabled.</div>
-{{ else }}
-  {{ if .Title }}
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES * * */
-        var disqus_shortname = 'jxf';
-        var disqus_url = '{{ .Permalink}}';
-        var disqus_identifier = '{{ .UniqueID }}';
+{{ if .Params.comments }}
+  <div class="comments">
+    <h2>Comments</h2>
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments.</a></noscript>
-  {{ else }}
-    This page doesn't have a document identifier or title, so we can't generate the Disqus thread.
-  {{ end }}
+    {{ if .Draft }}
+      <div id="disqus_thread">This page isn't published yet, so comments are disabled.</div>
+    {{ else }}
+      {{ if .Title }}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'jxf';
+            var disqus_url = '{{ .Permalink}}';
+            var disqus_identifier = '{{ .UniqueID }}';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments.</a></noscript>
+      {{ else }}
+        This page doesn't have a document identifier or title, so we can't generate the Disqus thread.
+      {{ end }}
+    {{ end }}
+  </div>
 {{ end }}

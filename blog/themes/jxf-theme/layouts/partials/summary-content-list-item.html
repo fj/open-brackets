@@ -1,23 +1,13 @@
-<li class="summary-item summary-item--compact">
-  <a href="{{ .item.Permalink }}" title="{{ .title }}">
-    <div class="content-item__row">
-      <div class="content-item__meta summary-item__date">
-        <small>
-          <!-- [TODO] Icon partial goes here. -->
-          {{ partial "icon.html" }}
+<li class="summary-item">
+  <a href="{{ .item.Permalink }}" title="{{ .title }}" class="small">
+    {{ partial "icon.html"  (dict "icon" .item.Params.icon) . }}
 
-          <!-- [TODO] Date partial goes here. -->
-          <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02" .date }}">
-            {{ dateFormat "Jan 02" .date }}
-          </time>
-        </small>
-      </div>
+    <time datetime="{{ dateFormat "2006-01-02" .date }}" title="{{ dateFormat "2006-01-02" .date }}" class="h5">
+      {{ dateFormat "Jan 02" .date }}
+    </time>
 
-      <div class="content-item__body">
-        <h4 class="content-item__title">
-          {{ .title }}
-        </h4>
-      </div>
-    </div>
+    <h4 class="content-title">
+      {{ .title }}
+    </h4>
   </a>
 </li>
